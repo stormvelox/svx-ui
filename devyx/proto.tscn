@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3seveyfqeqmt"]
+
+[ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://nbd-hsl/hsl-original/heatsync labs icon - color - latest.svg" id="1_n8dcj"]
+[ext_resource type="Script" uid="uid://d1nfpvv35yq06" path="res://devyx/test.gd" id="2_ubfyf"]
+[ext_resource type="Script" uid="uid://dlxjjppjxkgpn" path="res://devyx/button.gd" id="3_2sb7w"]
+
+[node name="Proto" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lefmost" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="CornerPiece" type="HBoxContainer" parent="HBoxContainer/Lefmost"]
+layout_mode = 2
+
+[node name="HSLLogo" type="TextureRect" parent="HBoxContainer/Lefmost/CornerPiece"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/Lefmost/CornerPiece"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "[tornado radius=3.0 freq=3.0 connected=2][colorHeat[/tornado][rainbow freq=1.0 sat=0.47 val=0.8 speed=1.0]Sync[/rainbow][pulse freq=1.0 color=#ffffff40 ease=-2.0]Labs[/pulse]"
+fit_content = true
+
+[node name="HSLLogo2" type="TextureRect" parent="HBoxContainer/Lefmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="HSLLogo3" type="TextureRect" parent="HBoxContainer/Lefmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="Centermost" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="GravTog" type="CheckButton" parent="HBoxContainer/Centermost"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "Gravity"
+clip_text = true
+icon_alignment = 2
+script = ExtResource("2_ubfyf")
+
+[node name="HSLLogo" type="TextureRect" parent="HBoxContainer/Centermost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+stretch_mode = 5
+
+[node name="HSLLogo2" type="TextureRect" parent="HBoxContainer/Centermost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+stretch_mode = 5
+
+[node name="Rightmost" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="HSLLogo" type="TextureRect" parent="HBoxContainer/Rightmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="Button" type="Button" parent="HBoxContainer/Rightmost"]
+layout_mode = 2
+text = "Where do I ..."
+script = ExtResource("3_2sb7w")
+
+[node name="HSLLogo2" type="TextureRect" parent="HBoxContainer/Rightmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="HSLLogo3" type="TextureRect" parent="HBoxContainer/Rightmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 606.0
+offset_top = 112.0
+offset_right = 855.0
+offset_bottom = 390.0
+text = "Co-Host, Hosting Spreadsheet
+"
+
+[connection signal="pressed" from="HBoxContainer/Rightmost/Button" to="HBoxContainer/Centermost/GravTog" method="_on_button_pressed"]
