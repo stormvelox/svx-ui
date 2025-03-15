@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3seveyfqeqmt"]
+[gd_scene load_steps=5 format=3 uid="uid://c3seveyfqeqmt"]
 
+[ext_resource type="Script" uid="uid://ckcqafqn5ykji" path="res://devyx/start_menu.gd" id="1_3r817"]
 [ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://nbd-hsl/hsl-original/heatsync labs icon - color - latest.svg" id="1_n8dcj"]
 [ext_resource type="Script" uid="uid://d1nfpvv35yq06" path="res://devyx/test.gd" id="2_ubfyf"]
 [ext_resource type="Script" uid="uid://dlxjjppjxkgpn" path="res://devyx/button.gd" id="3_2sb7w"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3r817")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
