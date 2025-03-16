@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vsgd8xmh4sbx"
-path="res://.godot/imported/heatsync labs logo - black - latest.svg-ab432e436343919d0225a735f135de12.ctex"
+uid="uid://d26dr01rj6piq"
+path="res://.godot/imported/hsl-icon-white-latest.svg-b8b749ebb47587b342bb71571eaaf0a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nbd-hsl/hsl-original/heatsync labs logo - black - latest.svg"
-dest_files=["res://.godot/imported/heatsync labs logo - black - latest.svg-ab432e436343919d0225a735f135de12.ctex"]
+source_file="res://nbd-hsl/hsl-original/hsl-icon-white-latest.svg"
+dest_files=["res://.godot/imported/hsl-icon-white-latest.svg-b8b749ebb47587b342bb71571eaaf0a9.ctex"]
 
 [params]
 

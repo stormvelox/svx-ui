@@ -1,3 +1,4 @@
+#region header
 ## Description here (if using class_name) also see:[br]
 ## https://docs.godotengine.org/en/latest/tutorials/scripting/gdscript/gdscript_documentation_comments.html?highlight=bbcode#bbcode-and-class-reference
 
@@ -6,53 +7,58 @@
 extends Node
 ## # docstring
 # doscstring test
-
-## signals
-#signal some_signal()
-
-## enums
+#endregion header
+#region variables
+#region signals
+#endregion
+#region enums
 #enum InlineEnum {ZERO, ONE, TWO}
 #enum SomeEnum {
 #    ZERO,
 #    ONE,
 #    TWO,
 #}
-
-## constants
+#endregion
+#region constants
 #const test : float =  0.00
-
-## exported variables
+#endregion
+#region exported variables
 #@export var show_debug : bool = false
-
-## public variables
+#endregion
+#region public variables
 #var public_var : bool = true
-
-## private variables
+#endregion
+#region private variables
 #var _private_var : bool = false
-
-## onready variables
+#endregion
+#region onready variables
 #@onready var onready_var : bool = true
-
-## optional built-in virtual _init method
+#endregion
+#endregion variables
+#region methods
+#region optional built-in virtual _init method
 #func _init() -> void:
 #    pass
+#endregion
 
-
-## built-in virtual _ready method
+#region built-in virtual _ready method
 func _ready() -> void:
 	pass
+#endregion
 
-
-## remaining built-in virtual methods
+#region remaining built-in virtual methods
 func _process(delta: float) -> void:
 	pass
 
-
-## public methods
+#endregion
+#region public methods
 #func public_method() -> void:
 #    pass
 
-
-## private methods
+#endregion
+#region private methods
 #func _on_some_signal() -> void:
 #    pass
+
+#endregion
+#endregion methods

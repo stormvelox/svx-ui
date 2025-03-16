@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c8vi07himqbov"]
 
-[ext_resource type="Texture2D" uid="uid://bsfdrwiu3wmvr" path="res://nbd-hsl/hsl-original/heatsync labs icon - black - latest.svg" id="1_gpvgr"]
+[ext_resource type="Texture2D" uid="uid://bsfdrwiu3wmvr" path="res://nbd-hsl/hsl-original/hsl-icon-black-latest.svg" id="1_gpvgr"]
 [ext_resource type="Script" uid="uid://bq342l1mnglta" path="res://devyx/logo_rolly.gd" id="1_ql7m0"]
-[ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://nbd-hsl/hsl-original/heatsync labs icon - color - latest.svg" id="2_ql7m0"]
-[ext_resource type="Texture2D" uid="uid://d26dr01rj6piq" path="res://nbd-hsl/hsl-original/heatsync labs icon - white - latest.svg" id="3_6fcgb"]
+[ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://nbd-hsl/hsl-original/hsl-icon-color-latest.svg" id="2_ql7m0"]
+[ext_resource type="Texture2D" uid="uid://d26dr01rj6piq" path="res://nbd-hsl/hsl-original/hsl-icon-white-latest.svg" id="3_6fcgb"]
 [ext_resource type="Script" uid="uid://dejc0li56j48y" path="res://devyx/hsl_logo_emitter.gd" id="5_6fcgb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gpvgr"]
