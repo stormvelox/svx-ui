@@ -1,0 +1,175 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1ftd3m1dsu8i"]
+
+[ext_resource type="Theme" uid="uid://du8go05julkwq" path="res://devyx/nbd-hsl/nbd-made/nbdhsl-ui-hsl_theme-01.tres" id="1_w2qiy"]
+[ext_resource type="StyleBox" uid="uid://dlm8oy1jnb2ma" path="res://devyx/nbd-hsl/nbd-made/hsl_godot_editor_theme/hsl_black_style_box_flat.tres" id="2_dnieh"]
+[ext_resource type="PackedScene" uid="uid://begby657et6eq" path="res://hold/test_panel.tscn" id="3_inbya"]
+[ext_resource type="StyleBox" uid="uid://bbkcqotvi0jmh" path="res://devyx/nbd-hsl/nbd-made/hsl_godot_editor_theme/hsl_orange-style_box_flat.tres" id="3_l4gvi"]
+[ext_resource type="Shader" uid="uid://ckt4mrsolytq3" path="res://devyx/macro-ui/pod_shader.tres" id="5_l4gvi"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1lgwx"]
+blend_mode = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yds0"]
+bg_color = Color(0.976471, 0.607843, 0.0470588, 1)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color(0.160784, 0.215686, 0.286275, 1)
+corner_radius_top_left = 2
+corner_radius_bottom_right = 4
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4gvi"]
+bg_color = Color(0.6, 0.529412, 0.839216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0579705, 0.8194, 0.762764, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2jqr"]
+shader = ExtResource("5_l4gvi")
+
+[node name="LowBar" type="Control"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LB1" type="Control" parent="."]
+custom_minimum_size = Vector2(256, 94)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_w2qiy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LB1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FillerPadLeft" parent="LB1/HBoxContainer" instance=ExtResource("3_inbya")]
+material = SubResource("CanvasItemMaterial_1lgwx")
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_l4gvi")
+
+[node name="OuterPanel" type="PanelContainer" parent="LB1/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_w2qiy")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1yds0")
+
+[node name="MarginOutToIn" type="MarginContainer" parent="LB1/HBoxContainer/OuterPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn"]
+layout_mode = 2
+
+[node name="InnerPanel" type="PanelContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_w2qiy")
+theme_override_styles/panel = ExtResource("2_dnieh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(256, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=ORANGE]HSL[/color]-[color=GRAY]NBD[/color]::[color=CYAN]VideoGame[/color] [color=RED](v.0.1.0.1)[/color]"
+scroll_active = false
+
+[node name="CenterContainer" type="CenterContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="InnerPanel" type="PanelContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/HBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TestPanel" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/HBoxContainer/CenterContainer/InnerPanel" instance=ExtResource("3_inbya")]
+custom_minimum_size = Vector2(12, 14)
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TestPanel" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/HBoxContainer/CenterContainer2" instance=ExtResource("3_inbya")]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4gvi")
+
+[node name="FlowContainer" type="GridContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+columns = 3
+
+[node name="HFlowContainer" type="HFlowContainer" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/FlowContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/FlowContainer/HFlowContainer"]
+modulate = Color(1, 0.313726, 0.145098, 1)
+clip_contents = true
+custom_minimum_size = Vector2(52, 12)
+layout_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/FlowContainer/HFlowContainer"]
+modulate = Color(0.392157, 1, 1, 1)
+clip_contents = true
+custom_minimum_size = Vector2(52, 12)
+layout_mode = 2
+
+[node name="ModeSelect" type="OptionButton" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(92, 28)
+layout_mode = 2
+size_flags_vertical = 0
+text_overrun_behavior = 3
+clip_text = true
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+popup/item_1/text = "NBD-Custom"
+popup/item_1/id = 1
+popup/item_2/id = 2
+
+[node name="WikiLink" type="LinkButton" parent="LB1/HBoxContainer/OuterPanel/MarginOutToIn/HBoxContainer/InnerPanel/VBoxContainer/FlowContainer"]
+layout_mode = 2
+text = "wiki.link"
+underline = 1
+uri = "https://wiki.heatsynclabs.org/"
+
+[node name="FillerPadRight" parent="LB1/HBoxContainer" instance=ExtResource("3_inbya")]
+material = SubResource("ShaderMaterial_q2jqr")
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_l4gvi")

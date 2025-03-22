@@ -1,6 +1,11 @@
-res://devyx/proto.tscn
-res://iversia.tscn
-res://main_2d.gd
-res://devyx/main_control.tscn
-res://devyx/panel_container_a.tscn
-res://devyx/scroll_container.gd
+res://core-a/iversia.tscn
+res://devyx/macro-ui/pod_shader.tres
+res://devyx/character_body_2d.gd
+res://core-a/main_control.tscn
+res://core-a/dashboard_a.tscn
+res://core-a/dashboard_a.gd
+res://devyx/logo-rolly/logo_rolly.tscn
+res://devyx/logo-rolly/logo_rolly.gd
+res://core-a/spawner_2d.tscn
+res://core-a/spawner_2d.gd
+res://core-a/iversia.gd

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://03hfpvmdllae"]
+
+[ext_resource type="PackedScene" uid="uid://do8kled48bqxi" path="res://hold/test_label.tscn" id="1_upgf1"]
+
+[node name="HFlowContainer" type="HFlowContainer"]
+
+[node name="Label" parent="." instance=ExtResource("1_upgf1")]
+layout_mode = 2
+
+[node name="Label2" parent="." instance=ExtResource("1_upgf1")]
+layout_mode = 2
+
+[node name="Label3" parent="." instance=ExtResource("1_upgf1")]
+layout_mode = 2
+
+[node name="Label4" parent="." instance=ExtResource("1_upgf1")]
+layout_mode = 2
+
+[node name="Label5" parent="." instance=ExtResource("1_upgf1")]
+layout_mode = 2
+
+[node name="Label6" parent="." instance=ExtResource("1_upgf1")]
+layout_mode = 2

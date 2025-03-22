@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1et6tryyhvna"]
+
+[ext_resource type="PackedScene" uid="uid://dmk58yrxg2jo6" path="res://devyx/micro-ui/floor.tscn" id="1_b7suh"]
+[ext_resource type="Script" uid="uid://dcu5xk7o8r1tu" path="res://core-a/spawner_2d.gd" id="2_yhlh4"]
+
+[node name="Level" type="Node2D"]
+position = Vector2(21, -35)
+
+[node name="Ledge" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 1, 0.67451, 1)
+position = Vector2(340, 118)
+scale = Vector2(2, 0.16)
+
+[node name="Rand" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 1, 0.67451, 1)
+position = Vector2(291, 296)
+rotation = 0.0518705
+scale = Vector2(0.562557, 0.16)
+
+[node name="Rand2" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 1, 0.67451, 1)
+position = Vector2(567, 310)
+rotation = 0.0518705
+scale = Vector2(0.562557, 0.16)
+
+[node name="Rand3" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 1, 0.67451, 1)
+position = Vector2(563, 399)
+rotation = 0.0518705
+scale = Vector2(0.562557, 0.16)
+
+[node name="Rand4" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 1, 0.67451, 1)
+position = Vector2(907, 231)
+rotation = 0.0518705
+scale = Vector2(0.562557, 0.16)
+
+[node name="Rand5" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 1, 0.67451, 1)
+position = Vector2(282, 293)
+rotation = 2.96233
+scale = Vector2(0.558635, 0.16)
+
+[node name="FloorBase" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(0.255659, 0.255659, 0.255659, 1)
+position = Vector2(-5, 663)
+scale = Vector2(3.04, 0.16)
+
+[node name="Wall1" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 0.486275, 0.34902, 1)
+position = Vector2(-4.99997, 2)
+rotation = 1.5708
+scale = Vector2(2, 0.16)
+
+[node name="Wall2" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(1, 0.486275, 0.34902, 1)
+position = Vector2(1130, -2)
+rotation = 1.5708
+scale = Vector2(2, 0.16)
+
+[node name="FloorA2" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(0.38, 0.209, 0.19, 1)
+position = Vector2(398, 606)
+scale = Vector2(2, 0.16)
+
+[node name="FloorA1" parent="." instance=ExtResource("1_b7suh")]
+modulate = Color(0, 0.870588, 0.360784, 1)
+position = Vector2(9, 578)
+scale = Vector2(2, 0.16)
+
+[node name="Spawner2D" type="Marker2D" parent="."]
+position = Vector2(76, 59)
+script = ExtResource("2_yhlh4")
+show_debug = null
+metadata/_custom_type_script = "uid://dcu5xk7o8r1tu"
