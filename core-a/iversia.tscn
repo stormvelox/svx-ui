@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://d20crbuuigoao"]
+[gd_scene load_steps=15 format=3 uid="uid://d20crbuuigoao"]
 
 [ext_resource type="Script" uid="uid://c8d4ot8cyva5a" path="res://core-a/main_2d.gd" id="1_067fk"]
 [ext_resource type="PackedScene" uid="uid://c8vi07himqbov" path="res://devyx/logo-rolly/logo_rolly.tscn" id="1_81he5"]
 [ext_resource type="Script" uid="uid://b1c8h73l2ls7i" path="res://core-a/iversia.gd" id="1_ce5nn"]
 [ext_resource type="PackedScene" uid="uid://c3seveyfqeqmt" path="res://core-a/main_control.tscn" id="1_sp1y8"]
 [ext_resource type="PackedScene" uid="uid://b0kokdiny7g61" path="res://hold/godotian-_anisprite.tscn" id="2_kptrc"]
+[ext_resource type="Script" uid="uid://cl8pcyw0yyddh" path="res://core-a/next_level.gd" id="2_ox1w0"]
 [ext_resource type="Script" uid="uid://csbkop6v1pbai" path="res://devyx/micro-ui/godotian__anisprite.gd" id="3_fth41"]
 [ext_resource type="Script" uid="uid://d2kmuwss04pus" path="res://devyx/camera_2d_main.gd" id="3_j62rk"]
 [ext_resource type="PackedScene" uid="uid://c1ftd3m1dsu8i" path="res://devyx/macro-ui/panel_o_doom.tscn" id="4_kptrc"]
@@ -18,6 +19,13 @@ size = Vector2(3000, 1000)
 
 [node name="Iversia" type="Node"]
 script = ExtResource("1_ce5nn")
+
+[node name="NextLevel" type="Button" parent="."]
+offset_left = 77.9999
+offset_top = 34.0
+offset_right = 85.9999
+offset_bottom = 42.0
+script = ExtResource("2_ox1w0")
 
 [node name="Main2D" type="Node2D" parent="."]
 script = ExtResource("1_067fk")

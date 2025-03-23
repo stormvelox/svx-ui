@@ -1,0 +1,395 @@
+[gd_scene load_steps=7 format=3 uid="uid://chk63wxy4qovg"]
+
+[ext_resource type="Texture2D" uid="uid://xvc3gvaxbkw3" path="res://hsl-wiki-logo.png" id="1_e00kr"]
+[ext_resource type="FontFile" uid="uid://cryexcwuifrc0" path="res://devyx/nbd-hsl/CharterBT-Bold.otf" id="2_e00kr"]
+[ext_resource type="Texture2D" uid="uid://7def686jm80x" path="res://icon.svg" id="3_s2ab5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygg0p"]
+bg_color = Color(0.992157, 0.992157, 0.992157, 0.0862745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ivt3"]
+bg_color = Color(0.501961, 0.878431, 0.501961, 0.435294)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.501961, 0.878431, 0.501961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qn21"]
+bg_color = Color(0.627451, 0.627451, 1, 0.435294)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.627451, 0.627451, 1, 1)
+
+[node name="HSLWiki" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="hbcAll" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="SideBar" type="VBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll"]
+custom_minimum_size = Vector2(154.94, 256)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PLogo" type="TextureButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+custom_minimum_size = Vector2(155, 155)
+layout_mode = 2
+tooltip_text = "Visit the main page"
+texture_normal = ExtResource("1_e00kr")
+stretch_mode = 5
+
+[node name="NavigationLabel" type="Label" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+layout_mode = 2
+text = "Navigation"
+
+[node name="NavigationPanel" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ygg0p")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer"]
+custom_minimum_size = Vector2(147.31, 0)
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "   ▪ Main page"
+underline = 1
+
+[node name="LinkButton2" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "   ▪ Community portal"
+underline = 1
+
+[node name="LinkButton3" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "   ▪ Current events"
+underline = 1
+
+[node name="LinkButton4" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "   ▪ Recent changes"
+underline = 1
+
+[node name="LinkButton5" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "   ▪ Random page"
+underline = 1
+
+[node name="LinkButton6" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/NavigationPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "   ▪ Help"
+underline = 1
+
+[node name="SearchLabel" type="Label" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+layout_mode = 2
+text = "search"
+
+[node name="SearchPanel" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ygg0p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/SearchPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/SearchPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+
+[node name="TextEdit" type="TextEdit" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/SearchPanel/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/SearchPanel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonGo" type="Button" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/SearchPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Go"
+
+[node name="ButtonSearch" type="Button" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/SearchPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Search"
+
+[node name="LabelToolbox" type="Label" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+layout_mode = 2
+text = "toolbox"
+
+[node name="Toolbox" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ygg0p")
+
+[node name="marginToolbox" type="MarginContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox"]
+layout_mode = 2
+
+[node name="vbcToolbox" type="VBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox"]
+custom_minimum_size = Vector2(147.31, 0)
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+layout_mode = 2
+text = "   ▪ What links here"
+underline = 1
+
+[node name="LinkButton2" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+layout_mode = 2
+text = "   ▪ Related changes"
+underline = 1
+
+[node name="LinkButton3" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+layout_mode = 2
+text = "   ▪ Upload file"
+underline = 1
+
+[node name="LinkButton4" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+layout_mode = 2
+text = "   ▪ Special pages"
+underline = 1
+
+[node name="LinkButton5" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+layout_mode = 2
+text = "   ▪ Printable version"
+underline = 1
+
+[node name="LinkButton6" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+layout_mode = 2
+text = "   ▪ Permanent link"
+underline = 1
+
+[node name="MainContent" type="VBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TopBar" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+alignment = 2
+
+[node name="Icon" type="Label" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "😸"
+
+[node name="UserPage" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "YourUsername"
+
+[node name="MyTalk" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "my talk"
+
+[node name="MyPreferences" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "my preferences"
+
+[node name="MyWatchlist" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "my watchlist"
+
+[node name="MyContributions" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "my contributions"
+
+[node name="LogOut" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/TopBar"]
+layout_mode = 2
+text = "log out"
+
+[node name="Tabs" type="TabContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent"]
+layout_mode = 2
+current_tab = 0
+clip_tabs = false
+
+[node name="Page" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+custom_minimum_size = Vector2(512, 256)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ygg0p")
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_e00kr")
+bbcode_enabled = true
+text = "[font size=19]Welcome to the HeatSync Labs Wiki![/font][p]————————————————————————————[p]HeatSync Labs is a nonprofit hackerspace in Arizona. Our objective is to empower engineers, artists, and inventors to push the limits of technology beyond its intended use. This wiki is intended as a collaborative area to record the decisions and policies made by the organization, share ideas and plans, and serve as a virtual workspace for member projects.[/p]
+
+"
+fit_content = true
+selection_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ivt3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_e00kr")
+bbcode_enabled = true
+text = "[font size=19.24]Community Information[/font]
+New to HeatSync Labs?
+FAQ
+Events
+Hack Your Hackerspace
+Rules and Guidelines
+Operational Policies
+Google Discussion group for official proposals and formal announcements.
+Slack invite link to post on specific channels for stations where appropriate.
+Open Hours
+Lab Resources
+If there are not specifics on how to get started on a tool post on Slack in the relevant channel (or general) expressing interest and asking for help."
+fit_content = true
+selection_enabled = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_8qn21")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer/PanelContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_e00kr")
+bbcode_enabled = true
+text = "[font size=19.24]Administration[/font]
+How to Run HeatSync Labs
+Operations team
+Money
+Finances
+Donations
+Fundraising
+Grants
+Hackerspace Discounts
+Bylaws (aka constitution, charter)
+Meeting Minutes
+Forms
+Procedures
+Document Retention and Destruction Policy
+Public Info
+Press Kit aka Logos & Flyers
+Press"
+fit_content = true
+selection_enabled = true
+
+[node name="Pagetemp" type="TabBar" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Discussiontemp" type="TabBar" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Edittemp" type="TabBar" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Historytemp" type="TabBar" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Movetemp" type="TabBar" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Watchtemp" type="TabBar" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 32
+
+[node name="BottomBar" type="HFlowContainer" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="LastModified" type="Label" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/BottomBar"]
+layout_mode = 2
+text = "This page was last modified on YYYY-MM-DD, at HH:MM:ss."
+
+[node name="AccessedQuantity" type="Label" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/BottomBar"]
+layout_mode = 2
+text = "This page was last modified on YYYY-MM-DD, at HH:MM:ss."
+
+[node name="PrivacyPolicy" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/BottomBar"]
+layout_mode = 2
+
+[node name="Disclaimers" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/BottomBar"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/BottomBar"]
+layout_mode = 2
+texture_normal = ExtResource("3_s2ab5")
+ignore_texture_size = true
+stretch_mode = 0
