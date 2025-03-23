@@ -163,32 +163,32 @@ layout_mode = 2
 custom_minimum_size = Vector2(147.31, 0)
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+[node name="WhatLinksHere" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
 layout_mode = 2
 text = "   ▪ What links here"
 underline = 1
 
-[node name="LinkButton2" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+[node name="RelatedChanges" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
 layout_mode = 2
 text = "   ▪ Related changes"
 underline = 1
 
-[node name="LinkButton3" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+[node name="UploadFile" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
 layout_mode = 2
 text = "   ▪ Upload file"
 underline = 1
 
-[node name="LinkButton4" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+[node name="SpecialPage" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
 layout_mode = 2
 text = "   ▪ Special pages"
 underline = 1
 
-[node name="LinkButton5" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+[node name="PrintableVersion" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
 layout_mode = 2
 text = "   ▪ Printable version"
 underline = 1
 
-[node name="LinkButton6" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
+[node name="PermanentLink" type="LinkButton" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/SideBar/Toolbox/marginToolbox/vbcToolbox"]
 layout_mode = 2
 text = "   ▪ Permanent link"
 underline = 1
@@ -304,6 +304,7 @@ theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/PanelContainer/hbcAll/MainContent/Tabs/Page/VBoxContainer/HBoxContainer/PanelContainer2/MarginContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 2

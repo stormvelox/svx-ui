@@ -1,8 +1,4 @@
-res://core-a/iversia.tscn
-res://devyx/macro-ui/pod_shader.tres
-res://core-a/iversia.gd
-res://core-a/next_level.gd
 res://devyx/logo-rolly/logo_rolly.tscn
+res://devyx/macro-ui/pod_shader.tres
+res://core-a/iversia.tscn
 res://hold/hsl_wiki_lookalike.tscn
-res://devyx/micro-ui/label_margin_a.tscn
-res://devyx/micro-ui/margin_lazier.gd
