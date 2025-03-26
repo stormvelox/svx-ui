@@ -8,8 +8,9 @@ extends Marker2D
 var next_spawn
 
 func _ready() -> void:
-	next_spawn = load(WhatToSpawn.get_path())
-	next_spawn.set_process()
+	pass
+	#next_spawn = load(WhatToSpawn.get_path())
+	#next_spawn.set_process()
 
 func _process(delta: float) -> void:
 	pass

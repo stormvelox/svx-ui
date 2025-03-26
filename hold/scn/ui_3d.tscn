@@ -12,6 +12,9 @@ grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_hgf51")
 
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+
 [node name="HFlowContainer" type="HFlowContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0

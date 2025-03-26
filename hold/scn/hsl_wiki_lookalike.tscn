@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://chk63wxy4qovg"]
+[gd_scene load_steps=8 format=3 uid="uid://chk63wxy4qovg"]
 
+[ext_resource type="PackedScene" uid="uid://1de4co1gt344" path="res://dfgdfhfdgh.tscn" id="1_6b8fl"]
 [ext_resource type="Texture2D" uid="uid://xvc3gvaxbkw3" path="res://hsl-wiki-logo.png" id="1_e00kr"]
 [ext_resource type="FontFile" uid="uid://cryexcwuifrc0" path="res://devyx/nbd-hsl/CharterBT-Bold.otf" id="2_e00kr"]
 [ext_resource type="Texture2D" uid="uid://7def686jm80x" path="res://icon.svg" id="3_s2ab5"]
@@ -24,6 +25,8 @@ border_width_bottom = 3
 border_color = Color(0.627451, 0.627451, 1, 1)
 
 [node name="HSLWiki" type="Node"]
+
+[node name="Panel" parent="." instance=ExtResource("1_6b8fl")]
 
 [node name="Control" type="Control" parent="."]
 clip_contents = true
