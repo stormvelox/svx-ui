@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://do8kled48bqxi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dskmf"]
+font_size = 48
+
+[node name="Label" type="Label"]
+text = "TEST"
+label_settings = SubResource("LabelSettings_dskmf")

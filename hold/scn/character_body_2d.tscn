@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://blaxla5tmjken"]
+
+[ext_resource type="PackedScene" uid="uid://b0kokdiny7g61" path="res://hold/scn/godotian-_anisprite.tscn" id="1_6suow"]
+[ext_resource type="Script" uid="uid://cs12k5laws7bj" path="res://devyx/character.gd" id="1_ow3sl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f50pn"]
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_ow3sl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f50pn")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("1_6suow")]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]

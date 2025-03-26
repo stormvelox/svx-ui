@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c8vi07himqbov" path="res://devyx/logo-rolly/logo_rolly.tscn" id="1_81he5"]
 [ext_resource type="Script" uid="uid://b1c8h73l2ls7i" path="res://core-a/iversia.gd" id="1_ce5nn"]
 [ext_resource type="PackedScene" uid="uid://c3seveyfqeqmt" path="res://core-a/main_control.tscn" id="1_sp1y8"]
-[ext_resource type="PackedScene" uid="uid://b0kokdiny7g61" path="res://hold/godotian-_anisprite.tscn" id="2_kptrc"]
+[ext_resource type="PackedScene" uid="uid://b0kokdiny7g61" path="res://hold/scn/godotian-_anisprite.tscn" id="2_kptrc"]
 [ext_resource type="Script" uid="uid://cl8pcyw0yyddh" path="res://core-a/next_level.gd" id="2_ox1w0"]
 [ext_resource type="Script" uid="uid://csbkop6v1pbai" path="res://devyx/micro-ui/godotian__anisprite.gd" id="3_fth41"]
 [ext_resource type="Script" uid="uid://d2kmuwss04pus" path="res://devyx/camera_2d_main.gd" id="3_j62rk"]
