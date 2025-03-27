@@ -1,0 +1,8 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://c2rq4kjukqrwp"]
+
+[ext_resource type="Material" uid="uid://d064mtmdhmgc3" path="res://wall_material.tres" id="1_pxsau"]
+
+[resource]
+material = ExtResource("1_pxsau")
+size = Vector2(8, 4)
+center_offset = Vector3(-4, 0, 2)
