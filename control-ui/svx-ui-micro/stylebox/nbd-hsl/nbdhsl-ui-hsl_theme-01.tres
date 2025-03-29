@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://du8go05julkwq"]
+
+[ext_resource type="StyleBox" uid="uid://bbkcqotvi0jmh" path="res://control-ui/svx-ui-micro/stylebox/nbd-hsl/hsl_orange-style_box_flat.tres" id="1_vosmg"]
+
+[resource]
+PanelContainer/styles/panel = ExtResource("1_vosmg")

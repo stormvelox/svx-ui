@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0kokdiny7g61"]
+
+[ext_resource type="Texture2D" uid="uid://7def686jm80x" path="res://icon.svg" id="1_wnujb"]
+
+[sub_resource type="SkeletonModification2D" id="SkeletonModification2D_rkn2f"]
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_m62bn"]
+enabled = true
+strength = 0.66
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2D_rkn2f")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m53ur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wnujb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Skeleton2D" type="Skeleton2D"]
+modification_stack = SubResource("SkeletonModificationStack2D_m62bn")
+
+[node name="Bone2D" type="Bone2D" parent="."]
+position = Vector2(-6, 2)
+
+[node name="PhysicalBone2D" type="PhysicalBone2D" parent="Bone2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bone2D/PhysicalBone2D"]
+sprite_frames = SubResource("SpriteFrames_m53ur")
+
+[node name="PhysicalBone2D2" type="PhysicalBone2D" parent="."]
+position = Vector2(-6, 131)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PhysicalBone2D2"]
+scale = Vector2(0.199999, 0.360001)
+sprite_frames = SubResource("SpriteFrames_m53ur")
+
+[node name="PhysicalBone2D3" type="PhysicalBone2D" parent="."]
+position = Vector2(1, 162)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PhysicalBone2D3"]
+scale = Vector2(1, 0.239999)
+sprite_frames = SubResource("SpriteFrames_m53ur")
+
+[node name="PhysicalBone2D4" type="PhysicalBone2D" parent="."]
+position = Vector2(-67, 169)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PhysicalBone2D4"]
+position = Vector2(12, -49)
+scale = Vector2(1, 0.28)
+sprite_frames = SubResource("SpriteFrames_m53ur")
+
+[node name="PhysicalBone2D5" type="PhysicalBone2D" parent="."]
+position = Vector2(0, 128)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PhysicalBone2D5"]
+scale = Vector2(0.304076, 0.304076)
+sprite_frames = SubResource("SpriteFrames_m53ur")

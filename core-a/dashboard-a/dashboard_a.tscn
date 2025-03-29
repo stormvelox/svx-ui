@@ -1,0 +1,190 @@
+[gd_scene load_steps=8 format=3 uid="uid://eon50ged533b"]
+
+[ext_resource type="Script" uid="uid://cqoy4gley7hvh" path="res://core-a/dashboard-a/dashboard_a.gd" id="1_r0p4p"]
+[ext_resource type="PackedScene" uid="uid://d2qsbhtgjcjui" path="res://core-a/dashboard-a/test_color_rect.tscn" id="2_uw247"]
+[ext_resource type="PackedScene" uid="uid://c8vi07himqbov" path="res://core-a/logo-rolly/logo_rolly.tscn" id="3_cy3nn"]
+[ext_resource type="PackedScene" uid="uid://begby657et6eq" path="res://core-a/dashboard-a/test_panel.tscn" id="4_pm6x3"]
+[ext_resource type="Script" uid="uid://uiap316dvdjp" path="res://control-ui/v_box_container.gd" id="5_k0p0j"]
+[ext_resource type="Script" uid="uid://druh0s6uohi10" path="res://control-ui/h_slider.gd" id="6_4h77p"]
+[ext_resource type="PackedScene" uid="uid://c1ftd3m1dsu8i" path="res://control-ui/svx-ui-macro/panel_o_doom.tscn" id="7_jbf0o"]
+
+[node name="DashboardA" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_r0p4p")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxTop" type="HBoxContainer" parent="VBoxContainer/Top"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="TopLeftArea" parent="VBoxContainer/Top/HBoxTop" instance=ExtResource("2_uw247")]
+layout_mode = 2
+
+[node name="LogoRolly" parent="VBoxContainer/Top/HBoxTop/TopLeftArea" instance=ExtResource("3_cy3nn")]
+
+[node name="TestPanel" parent="VBoxContainer/Top/HBoxTop" instance=ExtResource("4_pm6x3")]
+layout_mode = 2
+
+[node name="TopRightArea" parent="VBoxContainer/Top/HBoxTop" instance=ExtResource("2_uw247")]
+layout_mode = 2
+color = Color(1, 0.458824, 0.2, 1)
+
+[node name="TopLeftArea" parent="VBoxContainer" instance=ExtResource("2_uw247")]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.662745, 0.847059, 0.2, 1)
+
+[node name="Mid" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxMid" type="HBoxContainer" parent="VBoxContainer/Mid"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -256.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Mid/HBoxMid"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("5_k0p0j")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 19
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 19
+theme_override_constants/margin_bottom = 19
+
+[node name="OuterPanelContainer" type="PanelContainer" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TestPanel" type="PanelContainer" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel"]
+layout_mode = 2
+columns = 3
+metadata/_edit_lock_ = true
+
+[node name="TestPanel" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel2" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel3" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel4" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel5" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel6" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel7" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel8" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="TestPanel9" parent="VBoxContainer/Mid/HBoxMid/VBoxContainer/MarginContainer/OuterPanelContainer/TestPanel/GridContainer" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(16, 40)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Mid/HBoxMid"]
+custom_minimum_size = Vector2(64, 8)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+step = 0.2
+script = ExtResource("6_4h77p")
+
+[node name="TestPanel2" parent="VBoxContainer/Mid/HBoxMid" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+
+[node name="TestPanel3" parent="VBoxContainer/Mid/HBoxMid" instance=ExtResource("4_pm6x3")]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+
+[node name="TopRightArea" parent="VBoxContainer" instance=ExtResource("2_uw247")]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.458824, 0.2, 1)
+
+[node name="Bot" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxBot" type="HBoxContainer" parent="VBoxContainer/Bot"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Bot/HBoxBot"]
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="LowBar" parent="VBoxContainer/Bot/HBoxBot" instance=ExtResource("7_jbf0o")]
+layout_mode = 2
+
+[connection signal="value_changed" from="VBoxContainer/Mid/HBoxMid/HSlider" to="VBoxContainer/Mid/HBoxMid/VBoxContainer" method="_on_h_slider_value_changed"]

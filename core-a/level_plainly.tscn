@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1et6tryyhvna"]
 
-[ext_resource type="PackedScene" uid="uid://dmk58yrxg2jo6" path="res://devyx/micro-ui/floor.tscn" id="1_b7suh"]
-[ext_resource type="Script" uid="uid://dcu5xk7o8r1tu" path="res://core-a/spawner_2d.gd" id="2_yhlh4"]
+[ext_resource type="PackedScene" uid="uid://dmk58yrxg2jo6" path="res://control-ui/svx-ui-micro/floor.tscn" id="1_b7suh"]
+[ext_resource type="Script" uid="uid://dcu5xk7o8r1tu" path="res://editor-only/spawner_2d.gd" id="2_yhlh4"]
 
 [node name="Level" type="Node2D"]
 position = Vector2(21, -35)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://k6ttarxqerlb"]
+
+[ext_resource type="Script" uid="uid://bbvg23o76ka1b" path="res://control-ui/svx-ui-micro/container/margin_lazier.gd" id="1_5vhnh"]
+
+[node name="LabelMarginA" type="MarginContainer"]
+script = ExtResource("1_5vhnh")

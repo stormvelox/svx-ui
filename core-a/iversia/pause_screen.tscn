@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://1de4co1gt344"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u0t2"]
+bg_color = Color(0.781855, 0.422997, 0.908491, 1)
+border_width_left = 8
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.778285, 0.99997, 0.877834, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="PauseScreen" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 86.0
+offset_top = 51.0
+offset_right = -842.0
+offset_bottom = -442.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4u0t2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+text = "PAUSED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2

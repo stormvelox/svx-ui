@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://d2qsbhtgjcjui"]
-
-[node name="TestColorRect" type="ColorRect"]
-custom_minimum_size = Vector2(128, 32)
-color = Color(1, 1, 0.2, 1)

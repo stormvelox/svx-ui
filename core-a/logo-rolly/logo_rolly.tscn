@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8vi07himqbov"]
+
+[ext_resource type="Texture2D" uid="uid://bsfdrwiu3wmvr" path="res://ext/hsl-proprietary/hsl-icon-black-latest.svg" id="1_gpvgr"]
+[ext_resource type="Script" uid="uid://bq342l1mnglta" path="res://core-a/logo-rolly/logo_rolly.gd" id="1_ql7m0"]
+[ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://ext/hsl-proprietary/hsl-icon-color-latest.svg" id="2_ql7m0"]
+[ext_resource type="Texture2D" uid="uid://d26dr01rj6piq" path="res://ext/hsl-proprietary/hsl-icon-white-latest.svg" id="3_6fcgb"]
+[ext_resource type="Script" uid="uid://dejc0li56j48y" path="res://control-ui/svx-ui-micro/hsl_logo_emitter.gd" id="5_6fcgb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gpvgr"]
+radius = 22.0227
+
+[node name="LogoRolly" type="Node2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_ql7m0")
+skew_speed = 0.1
+sprite = NodePath("RigidHSLLogo/HeatsyncLabsIcon-Color-Latest")
+
+[node name="RigidHSLLogo" type="RigidBody2D" parent="."]
+
+[node name="HeatsyncLabsIcon-Black-Latest" type="Sprite2D" parent="RigidHSLLogo"]
+texture = ExtResource("1_gpvgr")
+
+[node name="HeatsyncLabsIcon-Color-Latest" type="Sprite2D" parent="RigidHSLLogo"]
+unique_name_in_owner = true
+texture = ExtResource("2_ql7m0")
+
+[node name="HeatsyncLabsIcon-White-Latest" type="Sprite2D" parent="RigidHSLLogo"]
+visible = false
+texture = ExtResource("3_6fcgb")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="RigidHSLLogo"]
+emitting = false
+texture = ExtResource("3_6fcgb")
+lifetime = 3.96
+gravity = Vector2(0, 120)
+script = ExtResource("5_6fcgb")
+
+[node name="RollyBitShape2D" type="CollisionShape2D" parent="RigidHSLLogo"]
+position = Vector2(-7, -3)
+shape = SubResource("CircleShape2D_gpvgr")

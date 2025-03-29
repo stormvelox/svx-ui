@@ -1,0 +1,6 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://cgino2bchkgfw"]
+
+[ext_resource type="Material" uid="uid://bsti2auokq7gj" path="res://heat-sync-3d/architecture/floor/material/tile_material.tres" id="1_416s2"]
+
+[resource]
+material = ExtResource("1_416s2")

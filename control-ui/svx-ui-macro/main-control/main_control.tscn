@@ -1,0 +1,202 @@
+[gd_scene load_steps=11 format=3 uid="uid://c3seveyfqeqmt"]
+
+[ext_resource type="Script" uid="uid://ckcqafqn5ykji" path="res://control-ui/start_menu.gd" id="1_3r817"]
+[ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://ext/hsl-proprietary/hsl-icon-color-latest.svg" id="1_n8dcj"]
+[ext_resource type="StyleBox" uid="uid://o25q66ua5pfr" path="res://control-ui/svx-ui-micro/stylebox/style_box_primary_a.tres" id="2_occra"]
+[ext_resource type="Script" uid="uid://burv5f38h0o1j" path="res://control-ui/svx-ui-macro/main-control/secondary_side.gd" id="2_sufwd"]
+[ext_resource type="PackedScene" uid="uid://mnk874hei4x7" path="res://control-ui/svx-ui-macro/panel_container_a.tscn" id="2_tb4h7"]
+[ext_resource type="Script" uid="uid://d1nfpvv35yq06" path="res://control-ui/svx-ui-macro/main-control/test.gd" id="2_ubfyf"]
+[ext_resource type="Script" uid="uid://dlxjjppjxkgpn" path="res://control-ui/svx-ui-micro/button/button.gd" id="3_2sb7w"]
+[ext_resource type="Texture2D" uid="uid://d26dr01rj6piq" path="res://ext/hsl-proprietary/hsl-icon-white-latest.svg" id="5_rxxmi"]
+[ext_resource type="PackedScene" uid="uid://croo6v1b0tcca" path="res://control-ui/svx-ui-macro/panel_backgrounder.tscn" id="5_xniba"]
+[ext_resource type="Texture2D" uid="uid://bsfdrwiu3wmvr" path="res://ext/hsl-proprietary/hsl-icon-black-latest.svg" id="6_tb4h7"]
+
+[node name="MainControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3r817")
+
+[node name="PrimaryZone" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OutermostCenter" type="MarginContainer" parent="PrimaryZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ColumnsBG" type="HSplitContainer" parent="PrimaryZone/OutermostCenter"]
+layout_mode = 2
+split_offset = 235
+
+[node name="ExtraSidePanels" type="Control" parent="PrimaryZone/OutermostCenter/ColumnsBG"]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+script = ExtResource("2_sufwd")
+
+[node name="NotesPanelBG" parent="PrimaryZone/OutermostCenter/ColumnsBG/ExtraSidePanels" instance=ExtResource("2_tb4h7")]
+custom_minimum_size = Vector2(128, 16)
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 16.0
+offset_bottom = 408.0
+
+[node name="FocalPanel" type="PanelContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("2_occra")
+
+[node name="In1Column1" type="HBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="In2Column1" type="VBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1"]
+layout_mode = 2
+
+[node name="CornerPiece" type="HBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/PanelContainer"]
+layout_mode = 2
+
+[node name="LogoMargin" type="MarginContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/PanelContainer/CornerPiece"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 4
+
+[node name="HSLLogo" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/PanelContainer/CornerPiece/LogoMargin"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="Divider" type="ColorRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/PanelContainer/CornerPiece"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.38403, 0.680508, 0.0813074, 1)
+
+[node name="HeatSyncLabs" type="RichTextLabel" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/PanelContainer/CornerPiece"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "[tornado radius=3.0 freq=3.0 connected=2][color=RED]Storm[/color][/tornado][rainbow freq=1.0 sat=0.47 val=0.8 speed=1.0]Volex[/rainbow][pulse freq=1.0 color=#ffffff40 ease=-2.0]Labs[/pulse]
+[tornado radius=3.0 freq=3.0 connected=2][color=RED]Storm[/color][/tornado][rainbow freq=1.0 sat=0.47 val=0.8 speed=1.0]Volex[/rainbow][pulse freq=1.0 color=#ffffff40 ease=-2.0]Labs[/pulse]
+[tornado radius=3.0 freq=3.0 connected=2][color=RED]Storm[/color][/tornado][rainbow freq=1.0 sat=0.47 val=0.8 speed=1.0]Volex[/rainbow][pulse freq=1.0 color=#ffffff40 ease=-2.0]Labs[/pulse]
+"
+fit_content = true
+
+[node name="ColumnCenter" type="HBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1"]
+layout_mode = 2
+
+[node name="Divider2" type="ColorRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter"]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+color = Color(0.38403, 0.680508, 0.0813074, 1)
+
+[node name="LogoTiles" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_n8dcj")
+expand_mode = 5
+stretch_mode = 1
+
+[node name="Centermost" type="VBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="PanelLogoBanner" type="PanelContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter/Centermost"]
+layout_mode = 2
+
+[node name="GravTog" type="CheckButton" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter/Centermost"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "Gravity"
+clip_text = true
+icon_alignment = 2
+script = ExtResource("2_ubfyf")
+
+[node name="HSLLogo" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter/Centermost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+stretch_mode = 5
+
+[node name="HSLLogo2" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter/Centermost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+stretch_mode = 5
+
+[node name="ButtonHSL" type="TextureButton" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1"]
+layout_mode = 2
+texture_normal = ExtResource("1_n8dcj")
+texture_pressed = ExtResource("5_rxxmi")
+texture_hover = ExtResource("6_tb4h7")
+stretch_mode = 0
+
+[node name="Rightmost" type="VBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1"]
+layout_mode = 2
+
+[node name="HSLLogo" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/Rightmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+expand_mode = 5
+
+[node name="ButtonToWiki" type="Button" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/Rightmost"]
+layout_mode = 2
+text = "Where do I ..."
+script = ExtResource("3_2sb7w")
+
+[node name="HSLLogo2" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/Rightmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+expand_mode = 5
+
+[node name="HSLLogo3" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/Rightmost"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+expand_mode = 4
+
+[node name="hbRight" type="VBoxContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+
+[node name="LogoMargin2" type="MarginContainer" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/hbRight"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 4
+
+[node name="HSLLogo" type="TextureRect" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/hbRight/LogoMargin2"]
+layout_mode = 2
+texture = ExtResource("1_n8dcj")
+
+[node name="PanelBackgrounder" parent="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel" instance=ExtResource("5_xniba")]
+visible = false
+layout_mode = 2
+
+[node name="VSlider" type="VSlider" parent="PrimaryZone"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/Rightmost/ButtonToWiki" to="PrimaryZone/OutermostCenter/ColumnsBG/FocalPanel/In1Column1/In2Column1/ColumnCenter/Centermost/GravTog" method="_on_button_pressed"]

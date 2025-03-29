@@ -23,12 +23,46 @@ config/icon="uid://7def686jm80x"
 
 [audio]
 
-buses/default_bus_layout="res://core-a/default_bus_layout.tres"
+buses/default_bus_layout="res://audio/default_bus_layout.tres"
 
 [display]
 
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
+
+[editor]
+
+import/reimport_missing_imported_files=false
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "red",
+"res://audio/": "orange",
+"res://control-ui/": "green",
+"res://control-ui/svx-ui-macro/": "teal",
+"res://control-ui/svx-ui-micro/": "orange",
+"res://control-ui/svx-ui-micro/stylebox/nbd-hsl/": "green",
+"res://core-a/": "teal",
+"res://core-a/dashboard-a/": "green",
+"res://core-a/hsl-wiki-lookalike/": "orange",
+"res://core-a/leetcode-session/": "gray",
+"res://core-a/logo-rolly/": "orange",
+"res://core-a/portryll/": "gray",
+"res://core-a/skelerobot/": "blue",
+"res://core-a/sunlyx/": "yellow",
+"res://editor-only/": "blue",
+"res://ext/": "red",
+"res://ext/hsl-proprietary/": "orange",
+"res://heat-sync-3d/": "yellow",
+"res://misc-other-assort/": "gray",
+"res://node3d/": "red",
+"res://script_templates/": "yellow",
+"res://shader/": "gray",
+"res://x/": "gray",
+"res://x/devyx/": "green",
+"res://x/meta/": "yellow"
+}
 
 [global_group]
 

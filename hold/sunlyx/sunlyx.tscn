@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://28phnd6e4i2h"]
-
-[ext_resource type="Script" uid="uid://dqdvcy32lsodi" path="res://hold/sunlyx/sunlyx.gd" id="1_g2wde"]
-
-[node name="Sunlyx" type="Node2D"]
-script = ExtResource("1_g2wde")
