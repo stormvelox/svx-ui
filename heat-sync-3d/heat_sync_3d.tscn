@@ -1,11 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://1vcsuv1jrr3v"]
+[gd_scene load_steps=26 format=3 uid="uid://1vcsuv1jrr3v"]
 
-[ext_resource type="Script" uid="uid://d13ugk1v6iruo" path="res://node3d/heat_sync_3d.gd" id="1_35km6"]
-[ext_resource type="PackedScene" uid="uid://c0rylteft0x1a" path="res://node3d/ui_3d.tscn" id="2_r2opk"]
+[ext_resource type="Script" uid="uid://d13ugk1v6iruo" path="res://heat-sync-3d/heat_sync_3d.gd" id="1_35km6"]
+[ext_resource type="PackedScene" uid="uid://c0rylteft0x1a" path="res://heat-sync-3d/ui_3d.tscn" id="2_r2opk"]
 [ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://ext/hsl-proprietary/hsl-icon-color-latest.svg" id="2_uy3ch"]
+[ext_resource type="Script" uid="uid://yk3evbdnjpix" path="res://heat-sync-3d/omni_light_3d_2.gd" id="3_hl7pe"]
 [ext_resource type="Script" uid="uid://c1vl30oqe13e1" path="res://heat-sync-3d/architecture/floor/script/floor.gd" id="3_kvsh5"]
 [ext_resource type="PackedScene" uid="uid://c6ww7e1eerkjb" path="res://heat-sync-3d/floor.tscn" id="3_nqcph"]
 [ext_resource type="AudioStream" uid="uid://dghlrwjshlswv" path="res://audio/forever.mp3" id="6_kvsh5"]
+[ext_resource type="Script" uid="uid://rofy2gr01hx3" path="res://heat-sync-3d/t_slider_gui.gd" id="8_65qfp"]
 [ext_resource type="PackedScene" uid="uid://o3ux3nq0aaeh" path="res://heat-sync-3d/architecture/wall/wall_meshin.tscn" id="10_x8i0a"]
 [ext_resource type="Texture2D" uid="uid://7def686jm80x" path="res://icon.svg" id="12_5mrah"]
 
@@ -79,21 +81,24 @@ material = SubResource("StandardMaterial3D_kvsh5")
 script = ExtResource("1_35km6")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2, 8)
+transform = Transform3D(0.971059, 0.00671462, 0.238744, 0, 0.999605, -0.0281136, -0.238839, 0.0273, 0.970676, -2.10664, 3.69531, 7.33074)
+doppler_tracking = 2
+current = true
 
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.85952, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14093, 4.17068, 5)
 omni_range = 43.909
 omni_attenuation = 2.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -2, 3.71905, 3)
+transform = Transform3D(0.184626, 0.319781, 0.929329, -0.866025, 0.5, 0, -0.464665, -0.804822, 0.369252, -5.9007, 7.94633, 3)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
 shadow_enabled = true
+script = ExtResource("3_hl7pe")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights/OmniLight3D2"]
 transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -3.93398, -1.63069, 0)
@@ -105,6 +110,32 @@ omni_range = 67.796
 omni_attenuation = 2.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights/OmniLight3D2"]
+transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, 7.06603, 17.4219, 52)
+light_color = Color(0.74978, 0.74978, 0.74978, 1)
+light_specular = 7.256
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 593.689
+omni_attenuation = 1.151
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(0.184626, 0.319781, 0.929329, -0.866025, 0.5, 0, -0.464665, -0.804822, 0.369252, 1.388, 10.8185, 0.486)
+light_projector = ExtResource("2_uy3ch")
+light_specular = 7.256
+light_bake_mode = 1
+shadow_enabled = true
+script = ExtResource("3_hl7pe")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights/OmniLight3D4"]
+transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -3.93398, -1.63069, 0)
+light_color = Color(0.74978, 0.74978, 0.74978, 1)
+light_specular = 7.256
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 67.796
+omni_attenuation = 2.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights/OmniLight3D4"]
 transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, 7.06603, 17.4219, 52)
 light_color = Color(0.74978, 0.74978, 0.74978, 1)
 light_specular = 7.256
@@ -6242,11 +6273,29 @@ transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, -3,
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, -3, 153)
 
 [node name="UI3D" parent="." instance=ExtResource("2_r2opk")]
-offset_left = 1.0
-offset_right = 1.0
+anchors_preset = -1
+anchor_left = 0.00078125
+anchor_right = 0.253125
+anchor_bottom = 0.430556
+metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" parent="UI3D" index="0"]
 world_3d = SubResource("World3D_dyj7g")
+
+[node name="WooshSlider" type="HSlider" parent="UI3D"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0464396
+anchor_top = 0.47386
+anchor_right = 0.827
+anchor_bottom = 0.757
+offset_top = 10.793
+offset_right = -44.0318
+offset_bottom = -47.301
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("8_65qfp")
+metadata/_edit_use_anchors_ = true
 
 [node name="Node2D" type="Node2D" parent="UI3D"]
 
@@ -6254,7 +6303,7 @@ world_3d = SubResource("World3D_dyj7g")
 position = Vector2(-1, 0)
 
 [node name="Icon" type="Sprite2D" parent="UI3D"]
-position = Vector2(85, 65)
+position = Vector2(138, 65)
 texture = ExtResource("12_5mrah")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
@@ -6266,5 +6315,7 @@ pitch_scale = 0.44
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, 0.1)
 mesh = SubResource("PlaneMesh_nqcph")
+
+[connection signal="drag_ended" from="UI3D/WooshSlider" to="Lights/OmniLight3D2" method="_on_woosh_slider_drag_ended"]
 
 [editable path="UI3D"]

@@ -1,4 +1,4 @@
-extends AnimatedSprite2D # This is what it's based on
+extends Skeleton2D # This is what it's based on
 
 # keyword yourName : type = value #
 var rotatation_speed : float = 0.02

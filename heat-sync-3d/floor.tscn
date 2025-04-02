@@ -13,9 +13,9 @@ offsets = PackedFloat32Array(0.0452261, 0.47234, 0.923404)
 colors = PackedColorArray(0.20002, 0.244348, 0.244341, 1, 0.872006, 1, 0.996802, 1, 0.92966, 0.8366, 0.94, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_416s2"]
-noise_type = 4
+noise_type = 2
 seed = 160
-frequency = 0.0284
+frequency = 0.008
 fractal_octaves = 8
 fractal_lacunarity = 1.585
 fractal_gain = 1.035

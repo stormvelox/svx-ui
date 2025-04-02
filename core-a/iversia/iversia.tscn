@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d20crbuuigoao"]
+[gd_scene load_steps=16 format=3 uid="uid://d20crbuuigoao"]
 
 [ext_resource type="Script" uid="uid://c8d4ot8cyva5a" path="res://core-a/iversia/main_2d.gd" id="1_067fk"]
 [ext_resource type="PackedScene" uid="uid://c8vi07himqbov" path="res://core-a/logo-rolly/logo_rolly.tscn" id="1_81he5"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c3seveyfqeqmt" path="res://control-ui/svx-ui-macro/main-control/main_control.tscn" id="1_sp1y8"]
 [ext_resource type="PackedScene" uid="uid://b0kokdiny7g61" path="res://core-a/skelerobot/godotian_skelebot.tscn" id="2_kptrc"]
 [ext_resource type="Script" uid="uid://cl8pcyw0yyddh" path="res://core-a/iversia/next_level.gd" id="2_ox1w0"]
-[ext_resource type="Script" uid="uid://csbkop6v1pbai" path="res://control-ui/svx-ui-micro/godotian__anisprite.gd" id="3_fth41"]
+[ext_resource type="Script" uid="uid://csbkop6v1pbai" path="res://control-ui/svx-ui-micro/godotian_anisprite.gd" id="3_fth41"]
 [ext_resource type="Script" uid="uid://d2kmuwss04pus" path="res://core-a/iversia/camera_2d_main.gd" id="3_j62rk"]
 [ext_resource type="PackedScene" uid="uid://c1ftd3m1dsu8i" path="res://control-ui/svx-ui-macro/panel_o_doom.tscn" id="4_kptrc"]
 [ext_resource type="PackedScene" uid="uid://djghhp6kvjcws" path="res://core-a/iversia/physics_test_rigids.tscn" id="6_k0nvq"]
@@ -16,6 +16,35 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81he5"]
 size = Vector2(3000, 1000)
+
+[sub_resource type="GDScript" id="GDScript_u5hml"]
+resource_name = "Restart"
+script/source = "#region header
+## Description
+#@tool
+class_name Restart
+extends Button
+## # docstring
+# doscstring description
+#endregion
+#region variables
+#signal
+#enum
+#const
+#@export
+#var
+#var _
+#@onready
+#endregion
+#region methods
+#func _
+func _ready() -> void:
+	pass
+func _process(delta: float) -> void:
+	pass
+#func
+#endregion
+"
 
 [node name="Iversia" type="Node"]
 script = ExtResource("1_ce5nn")
@@ -45,6 +74,34 @@ position = Vector2(182, 129)
 position = Vector2(1073, 534)
 scale = Vector2(1, 1.03653)
 script = ExtResource("3_fth41")
+
+[node name="Control" type="Control" parent="Main2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 228.0
+offset_top = 51.0
+offset_right = 341.0
+offset_bottom = 158.0
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Main2D/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Main2D/Control/HFlowContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Main2D/Control/HFlowContainer/AspectRatioContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main2D"]
+offset_left = 72.0
+offset_top = 66.0
+offset_right = 149.0
+offset_bottom = 142.0
+text = "DC480
+EVESEC
+PHX2600"
 
 [node name="HSLLogoFun2" parent="Main2D" instance=ExtResource("1_81he5")]
 position = Vector2(207, 34)
@@ -102,5 +159,125 @@ size_flags_vertical = 8
 position = Vector2(544.872, 227.622)
 scale = Vector2(0.36, 0.36)
 
-[node name="Spawner2D" parent="." instance=ExtResource("12_dlts0")]
+[node name="Spawner2D" parent="." node_paths=PackedStringArray("WhatToSpawn") instance=ExtResource("12_dlts0")]
 position = Vector2(42, 35)
+WhatToSpawn = NodePath("../Main2D/HSLLogoFun")
+
+[node name="Window" type="Window" parent="."]
+title = "Siide Window"
+position = Vector2i(-100, 36)
+size = Vector2i(120, 360)
+
+[node name="Control" type="Control" parent="Window"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Restart" type="Button" parent="Window/Control/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+script = SubResource("GDScript_u5hml")
+
+[node name="Button2" type="Button" parent="Window/Control/VBoxContainer"]
+layout_mode = 2
+text = "Choose Level"
+
+[node name="Window2" type="Window" parent="."]
+auto_translate_mode = 1
+title = "2"
+position = Vector2i(300, 36)
+size = Vector2i(120, 360)
+
+[node name="SubViewport" type="SubViewport" parent="Window2"]
+
+[node name="Window3" type="Window" parent="."]
+auto_translate_mode = 1
+title = "3"
+position = Vector2i(500, 36)
+size = Vector2i(120, 360)
+
+[node name="Control" type="Control" parent="Window3"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window3/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Restart" type="Button" parent="Window3/Control/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+script = SubResource("GDScript_u5hml")
+
+[node name="Button2" type="Button" parent="Window3/Control/VBoxContainer"]
+layout_mode = 2
+text = "Choose Level"
+
+[node name="Window4" type="Window" parent="."]
+auto_translate_mode = 1
+title = "4"
+position = Vector2i(700, 36)
+size = Vector2i(120, 360)
+
+[node name="Control" type="Control" parent="Window4"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window4/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Restart" type="Button" parent="Window4/Control/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+script = SubResource("GDScript_u5hml")
+
+[node name="Button2" type="Button" parent="Window4/Control/VBoxContainer"]
+layout_mode = 2
+text = "Choose Level"
+
+[node name="Window5" type="Window" parent="."]
+auto_translate_mode = 1
+title = "Win A"
+position = Vector2i(100, 316)
+size = Vector2i(120, 155)
+
+[node name="Control" type="Control" parent="Window5"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window5/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Restart" type="Button" parent="Window5/Control/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+script = SubResource("GDScript_u5hml")
+
+[node name="Button2" type="Button" parent="Window5/Control/VBoxContainer"]
+layout_mode = 2
+text = "Choose Level"

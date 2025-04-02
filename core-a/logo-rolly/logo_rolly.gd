@@ -1,5 +1,6 @@
 ## HSL Rolly Ball - It's the HSL logo, as a.. ball, that rolls![br]
 ## WahooOOOOOOOOOOOOOO!!!
+@tool
 class_name HSLRollyBall
 extends Node2D
 # signal

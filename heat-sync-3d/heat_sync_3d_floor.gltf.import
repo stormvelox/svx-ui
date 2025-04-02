@@ -8,7 +8,7 @@ valid=false
 
 [deps]
 
-source_file="res://node3d/heat_sync_3d_floor.gltf"
+source_file="res://heat-sync-3d/heat_sync_3d_floor.gltf"
 
 [params]
 
