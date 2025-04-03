@@ -25,8 +25,8 @@ func _process(delta: float) -> void:
 	
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
-		$Camera3D.position.x = direction * SPEED
+		$Cam1.position.x = direction * SPEED
 	else:
-		$Camera3D.position.x = move_toward($Camera3D.position.x, 0, SPEED)
+		$Cam1.position.x = move_toward($Cam1.position.x, 0, SPEED)
 #func
 #endregion
