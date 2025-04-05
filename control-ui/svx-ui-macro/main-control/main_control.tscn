@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://croo6v1b0tcca" path="res://control-ui/svx-ui-macro/panel_backgrounder.tscn" id="5_xniba"]
 [ext_resource type="Texture2D" uid="uid://bsfdrwiu3wmvr" path="res://ext/hsl-proprietary/hsl-icon-black-latest.svg" id="6_tb4h7"]
 
-[node name="MainControl" type="Control"]
+[node name="StartMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

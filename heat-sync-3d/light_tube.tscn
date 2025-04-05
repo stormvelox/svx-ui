@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxnskvg4mea6r"]
+
+[ext_resource type="Material" uid="uid://bmlmht44w2nre" path="res://heat-sync-3d/light_tube_material.tres" id="1_75wxq"]
+[ext_resource type="PackedScene" uid="uid://kyko1h56gmdm" path="res://heat-sync-3d/light_tube_omnilight_bit.tscn" id="2_xt5sm"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bhpxv"]
+material = ExtResource("1_75wxq")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 4.0
+radial_segments = 32
+
+[node name="LightTube" type="MeshInstance3D"]
+mesh = SubResource("CylinderMesh_bhpxv")
+
+[node name="OL1" parent="." instance=ExtResource("2_xt5sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="OL2" parent="." instance=ExtResource("2_xt5sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)

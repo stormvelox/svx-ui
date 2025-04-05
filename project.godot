@@ -73,6 +73,7 @@ entity="An entity, whatever *that* means..."
 editor_thingy="Not really \"in the game\", probs."
 destroyable="Tends to be destroyed by destroyers."
 destroyer="Destroys destroyables"
+lights="Does light work."
 
 [gui]
 

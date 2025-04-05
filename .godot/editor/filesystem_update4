@@ -1,5 +1,5 @@
 res://audio/default_bus_layout.tres
-res://heat-sync-3d/heat_sync_3d.tscn
+res://core-a/iversia/iversia.tscn
 res://control-ui/svx-ui-macro/pod_shader.tres
 res://heat-sync-3d/architecture/floor/material/orange_tile_material.tres
 res://heat-sync-3d/architecture/floor/material/tile_material.tres
@@ -9,11 +9,13 @@ res://heat-sync-3d/architecture/floor/material/front_tile_material.tres
 res://heat-sync-3d/architecture/floor/material/burntorange_tile_material.tres
 res://heat-sync-3d/architecture/wall/material/wall_material.tres
 res://heat-sync-3d/architecture/wall/mesh/wall_mesh.tres
-res://core-a/iversia/iversia.tscn
 res://control-ui/svx-ui-macro/main-control/main_control.tscn
 res://core-a/iversia/physics_test_rigids.tscn
 res://control-ui/svx-ui-micro/floor.tscn
 res://core-a/logo-rolly/logo_rolly.tscn
 res://core-a/hsl-wiki-lookalike/hsl_wiki_lookalike.tscn
-res://heat-sync-3d/heat_sync_3d.gd
-res://heat-sync-3d/cam_tool_silly1.gd
+res://heat-sync-3d/heat_sync_3d.tscn
+res://control-ui/start_menu.gd
+res://heat-sync-3d/light_tube.tscn
+res://heat-sync-3d/light_tube_omnilight_bit.tscn
+res://light_testing_scene.gd

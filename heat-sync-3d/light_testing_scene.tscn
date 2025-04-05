@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbvv8lknmk8by"]
+
+[ext_resource type="Script" uid="uid://3rf340mkdsq8" path="res://light_testing_scene.gd" id="1_1vrmf"]
+
+[node name="LightTestingScene" type="Node3D"]
+script = ExtResource("1_1vrmf")
