@@ -37,6 +37,7 @@ scale = Vector2(1.3927, 0.116162)
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Floor" parent="Node2D" instance=ExtResource("1_qj71g")]
+modulate = Color(0.728388, 0.481432, 0.271851, 1)
 position = Vector2(-15, 166)
 rotation = 0.318272
 scale = Vector2(0.469278, 0.469278)
@@ -52,16 +53,19 @@ rotation = -0.00300914
 scale = Vector2(1.80737, 0.102818)
 
 [node name="Floor3" parent="Node2D" instance=ExtResource("1_qj71g")]
+modulate = Color(1, 0.66, 0.66, 1)
 position = Vector2(306, 399)
 rotation = 0.036862
 scale = Vector2(1.3927, 0.116162)
 
 [node name="Floor4" parent="Node2D" instance=ExtResource("1_qj71g")]
+modulate = Color(0.30901, 0.269889, 0.377855, 1)
 position = Vector2(92, 268)
 rotation = 0.318272
 scale = Vector2(0.469278, 0.469278)
 
 [node name="Floor5" parent="Node2D" instance=ExtResource("1_qj71g")]
+modulate = Color(0.619809, 0.368004, 0.970363, 1)
 position = Vector2(361, 330)
 rotation = 0.036862
 scale = Vector2(1.3927, 0.116162)
