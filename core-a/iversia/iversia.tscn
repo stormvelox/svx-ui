@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://b0kokdiny7g61" path="res://core-a/skelerobot/godotian_skelebot.tscn" id="2_kptrc"]
 [ext_resource type="Script" uid="uid://cl8pcyw0yyddh" path="res://core-a/iversia/next_level.gd" id="2_ox1w0"]
 [ext_resource type="Script" uid="uid://csbkop6v1pbai" path="res://control-ui/svx-ui-micro/godotian_anisprite.gd" id="3_fth41"]
-[ext_resource type="Script" uid="uid://d2kmuwss04pus" path="res://core-a/iversia/camera_2d_main.gd" id="3_j62rk"]
+[ext_resource type="Script" uid="uid://d2kmuwss04pus" path="res://core-a/iversia/iv_camera_2d_main.gd" id="3_j62rk"]
 [ext_resource type="PackedScene" uid="uid://c1ftd3m1dsu8i" path="res://control-ui/svx-ui-macro/panel_o_doom.tscn" id="4_kptrc"]
 [ext_resource type="PackedScene" uid="uid://djghhp6kvjcws" path="res://core-a/iversia/physics_test_rigids.tscn" id="6_k0nvq"]
-[ext_resource type="Script" uid="uid://cc75aule6v4xw" path="res://core-a/iversia/deletion_zone.gd" id="7_j62rk"]
+[ext_resource type="Script" uid="uid://cc75aule6v4xw" path="res://core-a/iversia/iv_deletion_zone.gd" id="7_j62rk"]
 [ext_resource type="PackedScene" uid="uid://hop1j66pwue4" path="res://core-a/skelerobot/char_actor.tscn" id="8_gaf6o"]
 [ext_resource type="PackedScene" uid="uid://b3u85wk3oparn" path="res://editor-only/spawner_2d.tscn" id="12_dlts0"]
 

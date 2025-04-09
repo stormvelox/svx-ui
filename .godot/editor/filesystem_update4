@@ -20,3 +20,5 @@ res://core-a/hsl-wiki-lookalike/hsl_wiki_lookalike.tscn
 res://heat-sync-3d/light_tube.tscn
 res://heat-sync-3d/light_testing_scene.tscn
 res://heat-sync-3d/light_tube_omnilight_bit.tscn
+res://lights/light_tube_01.tscn
+res://heat-sync-3d/architecture/wall/wall_meshin.tscn

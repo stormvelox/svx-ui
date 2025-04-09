@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://hop1j66pwue4"]
 
-[ext_resource type="Script" uid="uid://dejw3gjqfpksl" path="res://core-a/iversia/char_actor.gd" id="1_1ek42"]
+[ext_resource type="Script" uid="uid://dejw3gjqfpksl" path="res://core-a/iversia/iv_char_actor.gd" id="1_1ek42"]
 [ext_resource type="Texture2D" uid="uid://7def686jm80x" path="res://icon.svg" id="2_piajt"]
 [ext_resource type="Script" uid="uid://chjn4scxwwg0n" path="res://core-a/skelerobot/character_body_2d.gd" id="2_upueg"]
 

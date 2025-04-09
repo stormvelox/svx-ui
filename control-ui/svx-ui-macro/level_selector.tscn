@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://1s73iugwqekb"]
 
-[ext_resource type="Script" uid="uid://b2bhsgpipxmf0" path="res://core-a/iversia/camera_2d.gd" id="1_wf8kt"]
+[ext_resource type="Script" uid="uid://b2bhsgpipxmf0" path="res://core-a/iversia/iv_camera_2d.gd" id="1_wf8kt"]
 
 [sub_resource type="CameraTexture" id="CameraTexture_syl7i"]
 

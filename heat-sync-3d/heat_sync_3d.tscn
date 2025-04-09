@@ -6,7 +6,8 @@
 [ext_resource type="Script" uid="uid://c1vl30oqe13e1" path="res://heat-sync-3d/architecture/floor/script/floor.gd" id="3_kvsh5"]
 [ext_resource type="PackedScene" uid="uid://c6ww7e1eerkjb" path="res://heat-sync-3d/floor.tscn" id="3_nqcph"]
 [ext_resource type="Script" uid="uid://y1bgb20c8t34" path="res://heat-sync-3d/cam_tool_silly1.gd" id="4_bhpxv"]
-[ext_resource type="PackedScene" uid="uid://bxqg6muhlhv16" path="res://lights/light_tube_01.tscn" id="5_ohuky"]
+[ext_resource type="PackedScene" uid="uid://cxnskvg4mea6r" path="res://heat-sync-3d/light_tube.tscn" id="5_ohuky"]
+[ext_resource type="Environment" uid="uid://dmr428hnx36hr" path="res://heat-sync-3d/default_environment.tres" id="6_hl7pe"]
 [ext_resource type="PackedScene" uid="uid://o3ux3nq0aaeh" path="res://heat-sync-3d/architecture/wall/wall_meshin.tscn" id="10_x8i0a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bhpxv"]
@@ -26,13 +27,6 @@ sky = SubResource("Sky_ohuky")
 exposure_multiplier = 0.245
 frustum_focus_distance = 0.35
 frustum_focal_length = 13.48
-
-[sub_resource type="Environment" id="Environment_thvjf"]
-background_mode = 1
-background_color = Color(0.31554, 0.2916, 0.36, 1)
-background_energy_multiplier = 0.45
-ambient_light_source = 1
-reflected_light_source = 2
 
 [sub_resource type="Gradient" id="Gradient_4fw46"]
 offsets = PackedFloat32Array(0.0452261, 0.47234, 0.923404)
@@ -98,7 +92,7 @@ omni_range = 43.909
 omni_attenuation = 2.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(0.374064, 0.647897, 0.663555, -0.866025, 0.5, -1.86144e-08, -0.331778, -0.574655, 0.748128, -5.9007, 17.0853, 3)
+transform = Transform3D(-0.499608, -0.865343, 0.0396432, -0.866025, 0.5, -1.72509e-08, -0.0198216, -0.034332, -0.999214, -5.9007, 30.622, 3)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
@@ -132,7 +126,7 @@ rotatio = Vector3(0.635, 26.4, 0)
 rotatey_speed = 16.71
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(0.374064, 0.647897, 0.663555, -0.866025, 0.5, -1.86144e-08, -0.331778, -0.574655, 0.748128, 1.388, 19.9575, 0.486)
+transform = Transform3D(-0.499608, -0.865343, 0.0396432, -0.866025, 0.5, -1.72509e-08, -0.0198216, -0.034332, -0.999214, 1.388, 33.4942, 0.486)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
@@ -177,11 +171,18 @@ light_bake_mode = 1
 shadow_enabled = true
 metadata/_edit_lock_ = true
 
-[node name="LightTube" parent="Lights" instance=ExtResource("5_ohuky")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.638, 17.8513, 39.8329)
+[node name="LightTube2" parent="Lights" instance=ExtResource("5_ohuky")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 55.0966, 16.0136, 3.7372)
+skeleton = NodePath("")
+
+[node name="OL1" parent="Lights/LightTube2" index="0"]
+visible = false
+
+[node name="OL2" parent="Lights/LightTube2" index="1"]
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_thvjf")
+environment = ExtResource("6_hl7pe")
 
 [node name="Floor" parent="." instance=ExtResource("3_nqcph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
@@ -6291,3 +6292,5 @@ transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, -3,
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, 0.1)
 mesh = SubResource("PlaneMesh_nqcph")
+
+[editable path="Lights/LightTube2"]
