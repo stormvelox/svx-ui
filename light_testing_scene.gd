@@ -11,7 +11,7 @@ extends Node3D
 #enum
 #const
 #@export
-#@export
+@export var test_light : Light3D
 #var
 #var _
 #@onready
@@ -19,16 +19,20 @@ extends Node3D
 #region methods
 #func _
 func _init() -> void:
-	light_groups = get_groups()
-	light_groups.has()
+	pass
 
 func _ready() -> void:
-	var all_lights_possible : Dictionary
-	# get all lights\
+	pass
 
-	lights_detected
-	for (i in )
 func _process(delta: float) -> void:
 	pass
-#func
+
+# Acquire all lights possible in project
+func acquire_valid_lights() -> Array:
+	# Find all lights
+	
+	#
+	
+	return Array.new() # temp
+	get_sce2232333232323R23R23R3233323323RQ
 #endregion

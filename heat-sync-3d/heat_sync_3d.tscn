@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://1vcsuv1jrr3v"]
+[gd_scene load_steps=24 format=3 uid="uid://1vcsuv1jrr3v"]
 
 [ext_resource type="Script" uid="uid://d13ugk1v6iruo" path="res://heat-sync-3d/heat_sync_3d.gd" id="1_35km6"]
 [ext_resource type="Texture2D" uid="uid://84fnp2fbvroc" path="res://ext/hsl-proprietary/hsl-icon-color-latest.svg" id="2_uy3ch"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c1vl30oqe13e1" path="res://heat-sync-3d/architecture/floor/script/floor.gd" id="3_kvsh5"]
 [ext_resource type="PackedScene" uid="uid://c6ww7e1eerkjb" path="res://heat-sync-3d/floor.tscn" id="3_nqcph"]
 [ext_resource type="Script" uid="uid://y1bgb20c8t34" path="res://heat-sync-3d/cam_tool_silly1.gd" id="4_bhpxv"]
+[ext_resource type="PackedScene" uid="uid://bxqg6muhlhv16" path="res://lights/light_tube_01.tscn" id="5_ohuky"]
 [ext_resource type="PackedScene" uid="uid://o3ux3nq0aaeh" path="res://heat-sync-3d/architecture/wall/wall_meshin.tscn" id="10_x8i0a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bhpxv"]
@@ -25,18 +26,6 @@ sky = SubResource("Sky_ohuky")
 exposure_multiplier = 0.245
 frustum_focus_distance = 0.35
 frustum_focal_length = 13.48
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_bhpxv"]
-top_radius = 0.1
-bottom_radius = 0.1
-height = 4.0
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ohuky"]
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 6.2
-backlight_enabled = true
-backlight = Color(1, 1, 1, 1)
 
 [sub_resource type="Environment" id="Environment_thvjf"]
 background_mode = 1
@@ -109,7 +98,7 @@ omni_range = 43.909
 omni_attenuation = 2.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(0.219993, 0.381038, -0.898005, -0.866025, 0.5, 3.02935e-07, 0.449003, 0.777694, 0.439985, -5.9007, 15.9941, 3)
+transform = Transform3D(0.374064, 0.647897, 0.663555, -0.866025, 0.5, -1.86144e-08, -0.331778, -0.574655, 0.748128, -5.9007, 17.0853, 3)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
@@ -143,7 +132,7 @@ rotatio = Vector3(0.635, 26.4, 0)
 rotatey_speed = 16.71
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(0.219993, 0.381038, -0.898005, -0.866025, 0.5, 3.02935e-07, 0.449003, 0.777694, 0.439985, 1.388, 18.8663, 0.486)
+transform = Transform3D(0.374064, 0.647897, 0.663555, -0.866025, 0.5, -1.86144e-08, -0.331778, -0.574655, 0.748128, 1.388, 19.9575, 0.486)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
@@ -188,14 +177,8 @@ light_bake_mode = 1
 shadow_enabled = true
 metadata/_edit_lock_ = true
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="Lights"]
+[node name="LightTube" parent="Lights" instance=ExtResource("5_ohuky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.638, 17.8513, 39.8329)
-mesh = SubResource("CylinderMesh_bhpxv")
-material = SubResource("ORMMaterial3D_ohuky")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Lights/CSGMesh3D"]
-light_energy = 2.4
-shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_thvjf")
