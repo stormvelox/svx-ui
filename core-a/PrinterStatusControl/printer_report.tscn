@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5wcbm4ugkrei"]
+[gd_scene load_steps=5 format=3 uid="uid://c5wcbm4ugkrei"]
 
+[ext_resource type="StyleBox" uid="uid://msw4esad4r00" path="res://core-a/PrinterStatusControl/stylebox_printer_offline.tres" id="1_sfmua"]
 [ext_resource type="Script" uid="uid://cad6o6brbc13p" path="res://core-a/PrinterStatusControl/printer_report.gd" id="1_tlwrn"]
 [ext_resource type="Script" uid="uid://bda5f5d8g6hcq" path="res://core-a/PrinterStatusControl/printer.gd" id="2_aoh2y"]
 
@@ -13,26 +14,44 @@ printerWikiLink = ""
 metadata/_custom_type_script = "uid://bda5f5d8g6hcq"
 
 [node name="Printer" type="PanelContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(180, 128)
+theme_override_styles/panel = ExtResource("1_sfmua")
 script = ExtResource("1_tlwrn")
 metadata/Printer = SubResource("Resource_yhhs4")
 
-[node name="HFlow" type="HFlowContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Name" type="RichTextLabel" parent="HFlow"]
+[node name="TopRow" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-text = "Printer-Name"
-scroll_active = false
+size_flags_vertical = 3
 
-[node name="StatusText" type="RichTextLabel" parent="HFlow"]
+[node name="Name" type="RichTextLabel" parent="VBoxContainer/TopRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Printer-Name"
 scroll_active = false
 
-[node name="LinkButton" type="LinkButton" parent="HFlow"]
+[node name="HFlow" type="HFlowContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="StatusText" type="RichTextLabel" parent="VBoxContainer/HFlow"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OFFLINE"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="BottomRow" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/BottomRow"]
 layout_mode = 2
 text = "LinkTo"
 

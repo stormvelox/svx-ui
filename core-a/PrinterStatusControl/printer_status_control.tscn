@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnsyd5lfq6n0b"]
+[gd_scene load_steps=6 format=3 uid="uid://bnsyd5lfq6n0b"]
 
 [ext_resource type="Script" uid="uid://b4d4wrv4ii7bi" path="res://core-a/PrinterStatusControl/printer_status_control.gd" id="1_vvv17"]
 [ext_resource type="PackedScene" uid="uid://c5wcbm4ugkrei" path="res://core-a/PrinterStatusControl/printer_report.tscn" id="2_n1iwb"]
+[ext_resource type="Shader" uid="uid://nq2fm8sdvxk6" path="res://core-a/PrinterStatusControl/printer_status_control.tres" id="2_xgbjp"]
+[ext_resource type="StyleBox" uid="uid://dlqf7u1mhfjgj" path="res://core-a/PrinterStatusControl/stylebox_printer_online.tres" id="4_5mvq6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l32t0"]
+shader = ExtResource("2_xgbjp")
 
 [node name="PrinterStatusControl" type="Control"]
 layout_mode = 3
@@ -11,6 +16,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vvv17")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_l32t0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Printer Status Control"
 
 [node name="GridOfPrinters" type="GridContainer" parent="."]
 layout_mode = 1
@@ -25,10 +46,13 @@ offset_right = 196.0
 offset_bottom = 196.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 44
+theme_override_constants/v_separation = 18
 columns = 3
 
 [node name="Max" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Max"
 
 [node name="EnderDragon" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
@@ -50,3 +74,11 @@ layout_mode = 2
 
 [node name="Tony" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="GridOfPrinters"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("4_5mvq6")
+text = "+"
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
