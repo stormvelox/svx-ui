@@ -1,22 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://mnk874hei4x7"]
+[gd_scene load_steps=4 format=3 uid="uid://mnk874hei4x7"]
 
+[ext_resource type="Script" uid="uid://oahujcveogfu" path="res://control-ui/svx-ui-macro/panel_container_a.gd" id="1_ldgbb"]
 [ext_resource type="StyleBox" uid="uid://o25q66ua5pfr" path="res://control-ui/svx-ui-micro/stylebox/style_box_primary_a.tres" id="1_rg3m5"]
 [ext_resource type="Script" uid="uid://4y24kkjg6nh2" path="res://control-ui/svx-ui-macro/scroll_container.gd" id="2_rg3m5"]
 
-[node name="Control" type="Control"]
-custom_minimum_size = Vector2(128, 128)
+[node name="xo_sidepanel_nbds" type="Control"]
 layout_mode = 3
-anchor_right = 0.0138889
-anchor_bottom = 0.0246914
-offset_right = -16.0
-offset_bottom = -16.0
+anchor_right = 0.522656
+anchor_bottom = 0.592593
+script = ExtResource("1_ldgbb")
 metadata/_edit_use_anchors_ = true
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.937288, 0.167651, 0.463469, 1)
+border_width = 1.5
 
 [node name="NotesPanelBG" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(128, 128)
-layout_mode = 0
-offset_right = 12.0
-offset_bottom = 6.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39
+anchor_right = 0.766
+anchor_bottom = 0.5
+offset_left = -0.190002
+offset_right = 65.914
+offset_bottom = 5.5
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_rg3m5")
 
 [node name="CenterContainer" type="MarginContainer" parent="NotesPanelBG"]
@@ -34,6 +50,39 @@ layout_mode = 2
 script = ExtResource("2_rg3m5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NotesPanelBG/CenterContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Alpha Bravo Ludos Lucid Dream O Scape Omni-Spectacular Testing 1 2 3 Abso Lute Lee"
+
+[node name="NotesPanelBG2" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0934307
+anchor_top = 0.293956
+anchor_right = 0.565933
+anchor_bottom = 0.809066
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_rg3m5")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="MarginContainer" parent="NotesPanelBG2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NotesPanelBG2/CenterContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("2_rg3m5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NotesPanelBG2/CenterContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
