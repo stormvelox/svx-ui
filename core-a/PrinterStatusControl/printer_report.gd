@@ -11,6 +11,7 @@ extends PanelContainer
 #enum
 #const
 @export var printerName : String = "Printer-Name"
+@export var statusText : String = "ONNLINE"
 #var
 #var _
 @onready var http_request: HTTPRequest = $HTTPRequest
@@ -18,8 +19,18 @@ extends PanelContainer
 #region methods
 #func _
 func _ready() -> void:
-	pass
+	$HFlow/Name.text = printerName
+	
 func _process(delta: float) -> void:
 	pass
 #func
+# Check address
+func check_address(url: String) -> bool:
+	var err : Error
+	err = http_request.request(url)
+	if (err != OK):
+		return false
+	else:
+		print("Able to reach the URL!! Wahooo!")
+		return true
 #endregion

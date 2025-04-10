@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnsyd5lfq6n0b"]
+
+[ext_resource type="Script" uid="uid://b4d4wrv4ii7bi" path="res://core-a/PrinterStatusControl/printer_status_control.gd" id="1_vvv17"]
+[ext_resource type="PackedScene" uid="uid://c5wcbm4ugkrei" path="res://core-a/PrinterStatusControl/printer_report.tscn" id="2_n1iwb"]
+
+[node name="PrinterStatusControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vvv17")
+
+[node name="GridOfPrinters" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Max" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="EnderDragon" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="Bruce" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="Cho" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="Ta\'Chala" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="Shuri" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="Reed" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2
+
+[node name="Tony" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
+layout_mode = 2

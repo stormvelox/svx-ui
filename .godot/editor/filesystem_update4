@@ -9,3 +9,10 @@ res://core-a/PrinterReport/printer_report.gd
 res://core-a/PrinterReport/printer.tres
 res://core-a/PrinterReport/printer_status_control.gd
 res://core-a/PrinterReport/printer.gd
+res://core-a/PrinterReport/printer_status_control.tscn
+res://core-a/PrinterStatusControl/printer_report.tscn
+res://core-a/PrinterStatusControl/printer.gd
+res://core-a/PrinterStatusControl/printer_report.gd
+res://core-a/PrinterStatusControl/stylebox_printer_online.tres
+res://core-a/PrinterStatusControl/stylebox_printer_offline.tres
+res://core-a/PrinterStatusControl/printer_status_control.tscn

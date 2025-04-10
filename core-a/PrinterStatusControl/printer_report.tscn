@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5wcbm4ugkrei"]
+
+[ext_resource type="Script" uid="uid://cad6o6brbc13p" path="res://core-a/PrinterStatusControl/printer_report.gd" id="1_tlwrn"]
+[ext_resource type="Script" uid="uid://bda5f5d8g6hcq" path="res://core-a/PrinterStatusControl/printer.gd" id="2_aoh2y"]
+
+[sub_resource type="Resource" id="Resource_yhhs4"]
+script = ExtResource("2_aoh2y")
+printerName = "DEFAULT"
+printerColorCode = Color(0, 0, 0, 1)
+printerWebAddress = ""
+printerMacAddress = ""
+printerWikiLink = ""
+metadata/_custom_type_script = "uid://bda5f5d8g6hcq"
+
+[node name="Printer" type="PanelContainer"]
+custom_minimum_size = Vector2(128, 128)
+script = ExtResource("1_tlwrn")
+metadata/Printer = SubResource("Resource_yhhs4")
+
+[node name="HFlow" type="HFlowContainer" parent="."]
+layout_mode = 2
+
+[node name="Name" type="RichTextLabel" parent="HFlow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Printer-Name"
+scroll_active = false
+
+[node name="StatusText" type="RichTextLabel" parent="HFlow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Printer-Name"
+scroll_active = false
+
+[node name="LinkButton" type="LinkButton" parent="HFlow"]
+layout_mode = 2
+text = "LinkTo"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
