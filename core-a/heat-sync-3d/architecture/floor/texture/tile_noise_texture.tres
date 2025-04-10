@@ -1,0 +1,8 @@
+[gd_resource type="NoiseTexture2D" load_steps=3 format=3 uid="uid://b7pwwws7xdlbs"]
+
+[ext_resource type="Gradient" uid="uid://bwky78n066fwa" path="res://core-a/heat-sync-3d/architecture/floor/color-ramp/tile_color_ramp.tres" id="1_eolmw"]
+[ext_resource type="FastNoiseLite" uid="uid://jf83sf7vlqmt" path="res://core-a/heat-sync-3d/architecture/wall/fast-noise-lite/wall_fast_noise_lite.tres" id="2_eolmw"]
+
+[resource]
+color_ramp = ExtResource("1_eolmw")
+noise = ExtResource("2_eolmw")

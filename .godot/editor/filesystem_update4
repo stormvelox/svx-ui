@@ -1,4 +1,11 @@
+res://audio/default_bus_layout.tres
 res://core-a/iversia/iversia.tscn
 res://control-ui/svx-ui-macro/pod_shader.tres
 res://control-ui/svx-ui-macro/main-control/main_control.tscn
 res://control-ui/svx-ui-macro/panel_container_a.tscn
+res://core-a/hsl-wiki-lookalike/hsl_wiki_lookalike.tscn
+res://core-a/PrinterReport/printer_report.tscn
+res://core-a/PrinterReport/printer_report.gd
+res://core-a/PrinterReport/printer.tres
+res://core-a/PrinterReport/printer_status_control.gd
+res://core-a/PrinterReport/printer.gd

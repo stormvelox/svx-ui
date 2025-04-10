@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://o3ux3nq0aaeh"]
+
+[ext_resource type="PlaneMesh" uid="uid://c2rq4kjukqrwp" path="res://core-a/heat-sync-3d/architecture/wall/mesh/wall_mesh.tres" id="1_nudux"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c531n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6pcmh"]
+size = Vector3(8, 0.01, 4)
+
+[node name="WallMeshin" type="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_nudux")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_c531n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.005, 2)
+shape = SubResource("BoxShape3D_6pcmh")
