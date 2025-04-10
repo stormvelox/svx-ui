@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://kyko1h56gmdm"]
-
-[node name="OL1" type="OmniLight3D" groups=["entity", "lights"]]
-light_energy = 2.4
-shadow_enabled = true

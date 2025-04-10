@@ -1,8 +1,7 @@
 #region header
 ## Description
 #@tool
-class_name _CLASS_
-extends _BASE_
+extends Camera2D
 ## # docstring
 # doscstring description
 #endregion

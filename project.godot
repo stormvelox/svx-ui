@@ -56,7 +56,6 @@ folder_colors={
 "res://editor-only/": "blue",
 "res://ext/": "red",
 "res://ext/hsl-proprietary/": "orange",
-"res://heat-sync-3d/": "yellow",
 "res://misc-other-assort/": "gray",
 "res://node3d/": "red",
 "res://script_templates/": "yellow",
