@@ -8,18 +8,19 @@ extends PanelContainer
 #region variables
 #signal
 #enum
-const onlineStylebox 	: StyleBoxFlat = preload(
+const onlineStylebox : StyleBoxFlat = preload(
 	"res://core-a/PrinterStatusControl/stylebox_printer_online.tres")
-const offlineStylebox 	: StyleBoxFlat = preload(
+const offlineStylebox : StyleBoxFlat = preload(
 	"res://core-a/PrinterStatusControl/stylebox_printer_offline.tres")
 
-@export var printerName : String = "unknown_name"
-@export var address 	: String
-var _status 			: bool   = false
-var _statusText 		: String = "unknown_status"
+@export var address : String
+
+var _status : bool   = false
 #var
 #var _
 @onready var http_request: HTTPRequest = $HTTPRequest
+@onready var printerName : String = $VBoxContainer/TopRow/Name.text
+@onready var _statusText : String = $VBoxContainer/HFlow/StatusText.text
 #endregion
 #region methods
 
@@ -27,12 +28,11 @@ var _statusText 		: String = "unknown_status"
 func _ready() -> void:
 	$VBoxContainer/TopRow/Name.text = printerName
 	_status = is_online(address)
-	
-
 
 # Process (every frame)
 func _process(delta: float) -> void:
 	pass
+
 
 # Change the stylebox
 func change_style() -> void:
@@ -40,6 +40,7 @@ func change_style() -> void:
 		add_theme_stylebox_override("panel", onlineStylebox)
 	else:
 		add_theme_stylebox_override("panel", offlineStylebox)
+
 
 # Check if printer is online
 func is_online(url: String) -> bool:
@@ -52,6 +53,7 @@ func is_online(url: String) -> bool:
 		_statusText = "OFFLINE"
 	return status
 
+
 # Ping a URL
 func ping_server(url: String) -> bool:
 	var err : Error
@@ -62,5 +64,7 @@ func ping_server(url: String) -> bool:
 	else:
 		print("Able to reach the URL!! Wahooo!")
 		return true
+
+
 
 #endregion
