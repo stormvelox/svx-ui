@@ -28,6 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(128, 16)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -95,5 +96,3 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = ExtResource("4_5mvq6")
 text = "+"
-
-[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
