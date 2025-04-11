@@ -1,7 +1,6 @@
 #region header
 ## Description
 #@tool
-class_name Input
 extends LineEdit
 ## # docstring
 # doscstring description

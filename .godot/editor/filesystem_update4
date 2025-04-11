@@ -1,8 +1,1 @@
-res://core-a/iversia/iversia.tscn
-res://control-ui/svx-ui-macro/pod_shader.tres
-res://core-a/PrinterStatusControl/printer_status_control.tres
-res://control-ui/svx-ui-macro/main-control/main_control.tscn
-res://control-ui/svx-ui-macro/panel_container_a.tscn
-res://core-a/PrinterStatusControl/printer_status_control.tscn
-res://core-a/PrinterStatusControl/printer_report.tscn
-res://core-a/PrinterStatusControl/printer_report.gd
+res://audio/default_bus_layout.tres

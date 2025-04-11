@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbvv8lknmk8by"]
 
-[ext_resource type="Script" uid="uid://3rf340mkdsq8" path="res://core-a/heat-sync-3d/light_testing_scene (2).gd" id="1_1vrmf"]
+[ext_resource type="Script" uid="uid://3rf340mkdsq8" path="res://core-a/heat-sync-3d/light_testing_scene.gd" id="1_1vrmf"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_1vrmf"]
 

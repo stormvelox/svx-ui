@@ -1,7 +1,6 @@
 #region header
 ## Description
 #@tool
-class_name LightTestingScene
 extends Node3D
 ## # docstring
 # doscstring description
@@ -11,7 +10,7 @@ extends Node3D
 #enum
 #const
 #@export
-@export var test_light : Light3D
+@export var x : Light3D
 #var
 #var _
 #@onready
@@ -33,6 +32,5 @@ func acquire_valid_lights() -> Array:
 	
 	#
 	
-	return Array.new() # temp
-	get_sce2232333232323R23R23R3233323323RQ
+	return [] # temp
 #endregion

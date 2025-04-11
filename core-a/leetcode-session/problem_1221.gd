@@ -25,38 +25,40 @@ func _ready() -> void:
 func try_examples():
 	## Test with the examples
 	print("Trying \"", example1, "\"!")
-	split_strings(example1)
+	split_string(example1)
 	print("Trying \"", example2, "\"!")
-	split_strings(example2)
+	split_string(example2)
 	print("Trying \"", example3, "\"!")
-	split_strings(example3)
+	split_string(example3)
 	
-func split_string():
+func split_string(v: Variant):
 	## The main shindig
 	pass
 
-func ensure_constraints(String: s) -> bool:
+func ensure_constraints(s: String) -> bool:
 	if (is_correct_length(s) && is_l_or_r(s)):
 		return true
 	else:
 		return false
 
-func is_correct_length(String: s) -> bool:
+func is_correct_length(s: String) -> bool:
 	## 2 <= s.length <= 1000
-	len = s.length
-	if (len <= 2 && s.length ):
+	var len = s.length()
+	if (len <= 2):
 		return true
+	else:
+		return false
 
-func is_l_or_r(String: s) -> bool:
+func is_l_or_r(s: String) -> bool:
 	## s is either 'L' or 'R'
 	if(s):
 		return true
 	else:
 		return false
 
-func is_balanced_string(String: s) -> bool:
+func is_balanced_string(s: String) -> bool:
 	## s is a balanced string
-	if():
+	if(true):
 		return true
 	else:
 		return false
