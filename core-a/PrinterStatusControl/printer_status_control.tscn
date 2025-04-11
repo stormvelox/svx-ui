@@ -53,27 +53,42 @@ columns = 3
 [node name="Max" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
 printerName = "Max"
+address = "http://max.local/"
 
 [node name="EnderDragon" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "EnderDragon"
+address = "http://enderdragon.local/"
 
 [node name="Bruce" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Bruce"
+address = "http://bruce.local/"
 
 [node name="Cho" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Cho"
+address = "http://cho.local/"
 
 [node name="Ta\'Chala" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Ta'Chala"
+address = "http://tachala.local/"
 
 [node name="Shuri" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Shuri"
+address = "http://shuri.local/"
 
 [node name="Reed" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Reed"
+address = "http://reed.local/"
 
 [node name="Tony" parent="GridOfPrinters" instance=ExtResource("2_n1iwb")]
 layout_mode = 2
+printerName = "Tony"
+address = "http://tony.local/"
 
 [node name="Button" type="Button" parent="GridOfPrinters"]
 layout_mode = 2

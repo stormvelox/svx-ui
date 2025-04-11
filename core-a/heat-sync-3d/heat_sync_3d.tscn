@@ -92,7 +92,7 @@ omni_range = 43.909
 omni_attenuation = 2.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(-0.499608, -0.865343, 0.0396432, -0.866025, 0.5, -1.72509e-08, -0.0198216, -0.034332, -0.999214, -5.9007, 30.622, 3)
+transform = Transform3D(0.447039, 0.774291, -0.447915, -0.866025, 0.5, -6.05729e-08, 0.223958, 0.387905, 0.894076, -5.9007, 33.5074, 3)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
@@ -126,7 +126,7 @@ rotatio = Vector3(0.635, 26.4, 0)
 rotatey_speed = 16.71
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(-0.499608, -0.865343, 0.0396432, -0.866025, 0.5, -1.72509e-08, -0.0198216, -0.034332, -0.999214, 1.388, 33.4942, 0.486)
+transform = Transform3D(0.447039, 0.774291, -0.447915, -0.866025, 0.5, -6.05729e-08, 0.223958, 0.387905, 0.894076, 1.388, 36.3796, 0.486)
 light_projector = ExtResource("2_uy3ch")
 light_specular = 7.256
 light_bake_mode = 1
