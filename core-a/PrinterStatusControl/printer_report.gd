@@ -15,10 +15,10 @@ enum StatusMode {
 @export var printerName : String
 @export var address : String
 
-var onlineStylebox : StyleBoxFlat
-var offlineStylebox : StyleBoxFlat
+var onlineStylebox : StyleBoxFlat = load("res://core-a/PrinterStatusControl/stylebox_printer_online.tres")
+var offlineStylebox : StyleBoxFlat = load("res://core-a/PrinterStatusControl/stylebox_printer_offline.tres")
 var _status : StatusMode = StatusMode.OFFLINE
-var _statusText : String = "OFFLINE"
+@onready var _statusText : Node = $VBoxContainer/HFlow/StatusText
 
 @onready var http_request : HTTPRequest = $HTTPRequest
 
@@ -29,15 +29,11 @@ var _statusText : String = "OFFLINE"
 # Ready
 func _ready() -> void:
 	print_debug("_ready running...")
-	onlineStylebox = load("res://core-a/PrinterStatusControl/stylebox_printer_online.tres")
-	offlineStylebox = load("res://core-a/PrinterStatusControl/stylebox_printer_offline.tres")
-
-	
-	print_debug("Name setup: ", printerName)
+	onlineStylebox 
+	offlineStylebox 
 	$VBoxContainer/TopRow/Name.text = printerName
-	print_debug("Status setup", _statusText)
-	$VBoxContainer/HFlow/StatusText.text = _statusText
-	
+	$VBoxContainer/HFlow/StatusText.text = "OFFLINE"
+	is_online(address)
 
 
 # Process (every frame)
@@ -49,10 +45,11 @@ func _process(delta: float) -> void:
 func change_style(mode: StatusMode) -> void:
 	print_debug("change_style() running...")
 	if (mode == StatusMode.ONLINE):
-		add_theme_stylebox_override("theme_override_styles/panel", onlineStylebox)
+		print_debug("Overriding theme ONLINE")
+		add_theme_stylebox_override("panel", onlineStylebox)
 	else:
+		print_debug("Overriding theme OFFLINE")
 		add_theme_stylebox_override("theme_override_styles/panel", offlineStylebox)
-
 
 # Check if printer is online
 func is_online(url: String) -> bool:
@@ -65,12 +62,12 @@ func is_online(url: String) -> bool:
 		print_debug("Printer is online!")
 		_status = StatusMode.ONLINE
 		change_style(_status)
-		_statusText = "ONLINE"
+		_statusText.text = "ONLINE"
 	else:
 		print_debug("Priner is offline")
 		_status = StatusMode.OFFLINE
 		change_style(_status)
-		_statusText = "OFFLINE"
+		_statusText.text = "OFFLINE"
 	return status
 
 
@@ -87,7 +84,6 @@ func ping_server(url: String) -> bool:
 	else:
 		print("Able to reach the URL!! Wahooo!")
 		return true
-
 
 
 #endregion
