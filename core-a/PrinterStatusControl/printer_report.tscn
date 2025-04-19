@@ -15,10 +15,16 @@ metadata/_custom_type_script = "uid://bda5f5d8g6hcq"
 
 [node name="Printer" type="PanelContainer"]
 custom_minimum_size = Vector2(180, 128)
+anchors_preset = -1
+anchor_right = 0.140625
+anchor_bottom = 0.197531
+offset_right = -180.0
+offset_bottom = -128.0
 theme_override_styles/panel = ExtResource("1_sfmua")
 script = ExtResource("1_tlwrn")
 printerName = "unknown_name"
 metadata/Printer = SubResource("Resource_yhhs4")
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

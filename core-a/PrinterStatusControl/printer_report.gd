@@ -33,11 +33,9 @@ func _ready() -> void:
 	is_online(address)
 	# End of Ready
 
-
 # Process (every frame)
 func _process(delta: float) -> void:
 	pass
-
 
 # Change the stylebox
 func change_style(mode: StatusMode) -> void:
@@ -51,23 +49,23 @@ func change_style(mode: StatusMode) -> void:
 
 # Check if printer is online
 func is_online(url: String) -> bool:
-	print_debug("is_online() running...")
-	var status : bool = false
 	
+	print_debug("is_online() running...")
+	var is_online : bool = false
+	var was_pinged : bool = false
+	
+	# Ping thy server
 	print_debug("Pinging server..")
-	status = ping_server(url)
-	if (status == true):
-		print_debug("Printer is online!")
-		_status = StatusMode.ONLINE
-		change_style(_status)
-		_statusText.text = "ONLINE"
+	was_pinged = ping_server(url)
+	
+	if (was_pinged == true):
+		set_online()
+		is_online = true
 	else:
-		print_debug("Printer is offline")
-		_status = StatusMode.OFFLINE
-		change_style(_status)
-		_statusText.text = "OFFLINE"
-	return status
-
+		set_offline()
+		is_online = false
+	
+	return is_online
 
 # Ping a URL
 func ping_server(url: String) -> bool:
@@ -83,5 +81,16 @@ func ping_server(url: String) -> bool:
 		print("Able to reach the URL!! Wahooo!")
 		return true
 
+func set_online() -> void:
+	print_debug("Printer is online!")
+	_status = StatusMode.ONLINE
+	change_style(_status)
+	_statusText.text = "ONLINE"
+
+func set_offline() -> void:
+	print_debug("Printer is offline")
+	_status = StatusMode.OFFLINE
+	change_style(_status)
+	_statusText.text = "OFFLINE"
 
 #endregion

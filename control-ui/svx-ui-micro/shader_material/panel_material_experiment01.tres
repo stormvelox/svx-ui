@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cviybgh2ejq8t"]
+
+[ext_resource type="Shader" uid="uid://nq2fm8sdvxk6" path="res://core-a/PrinterStatusControl/printer_status_control.tres" id="1_bkwpl"]
+
+[resource]
+shader = ExtResource("1_bkwpl")

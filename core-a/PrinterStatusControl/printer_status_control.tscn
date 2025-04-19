@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnsyd5lfq6n0b"]
+[gd_scene load_steps=5 format=3 uid="uid://bnsyd5lfq6n0b"]
 
 [ext_resource type="Script" uid="uid://b4d4wrv4ii7bi" path="res://core-a/PrinterStatusControl/printer_status_control.gd" id="1_vvv17"]
 [ext_resource type="PackedScene" uid="uid://c5wcbm4ugkrei" path="res://core-a/PrinterStatusControl/printer_report.tscn" id="2_n1iwb"]
-[ext_resource type="Shader" uid="uid://nq2fm8sdvxk6" path="res://core-a/PrinterStatusControl/printer_status_control.tres" id="2_xgbjp"]
+[ext_resource type="Material" uid="uid://cviybgh2ejq8t" path="res://control-ui/svx-ui-micro/shader_material/panel_material_experiment01.tres" id="2_xgbjp"]
 [ext_resource type="StyleBox" uid="uid://dlqf7u1mhfjgj" path="res://core-a/PrinterStatusControl/stylebox_printer_online.tres" id="4_5mvq6"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l32t0"]
-shader = ExtResource("2_xgbjp")
 
 [node name="PrinterStatusControl" type="Control"]
 layout_mode = 3
@@ -19,7 +16,7 @@ script = ExtResource("1_vvv17")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 z_index = -1
-material = SubResource("ShaderMaterial_l32t0")
+material = ExtResource("2_xgbjp")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
