@@ -8,3 +8,5 @@ res://core-a/PrinterStatusControl/printer_report.gd
 res://core-a/PrinterStatusControl/printer_report.tscn
 res://core-a/logo-rolly/logo_rolly.tscn
 res://lan-printer-thingy-idea.tscn
+res://control-ui/svx-ui-micro/shader_material/panel_material_experiment01.tres
+res://core-a/PrinterStatusControl/stylebox_add_item.tres

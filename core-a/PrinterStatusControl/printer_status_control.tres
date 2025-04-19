@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://nq2fm8sdvxk6"]
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://nq2fm8sdvxk6"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_sb10l"]
 input_name = "screen_uv"
@@ -17,27 +17,12 @@ constant = Transform3D(3.424, 7.649, 9.443, 0.381, 2.509, 1.032, 0.446, 0.213, 2
 [sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_g71gb"]
 function = 3
 
-[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_xpmvm"]
-expanded_output_ports = [0]
-input_name = "color"
-
 [resource]
 code = "shader_type canvas_item;
-render_mode blend_mix;
+render_mode blend_disabled;
 
 
 
-
-void vertex() {
-// Input:2
-	vec4 n_out2p0 = COLOR;
-
-
-// Output:0
-	VERTEX = vec2(n_out2p0.xy);
-
-
-}
 
 void fragment() {
 // TransformConstant:6
@@ -67,10 +52,8 @@ void fragment() {
 "
 graph_offset = Vector2(-161.613, 12.1948)
 mode = 1
+modes/blend = 5
 flags/light_only = false
-nodes/vertex/2/node = SubResource("VisualShaderNodeInput_xpmvm")
-nodes/vertex/2/position = Vector2(-100, 140)
-nodes/vertex/connections = PackedInt32Array(2, 0, 0, 0)
 nodes/fragment/0/position = Vector2(680, 540)
 nodes/fragment/2/node = SubResource("VisualShaderNodeInput_sb10l")
 nodes/fragment/2/position = Vector2(20, 180)
