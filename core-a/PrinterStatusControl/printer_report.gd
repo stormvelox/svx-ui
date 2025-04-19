@@ -29,8 +29,6 @@ var _status : StatusMode = StatusMode.OFFLINE
 # Ready
 func _ready() -> void:
 	print_debug("_ready running...")
-	onlineStylebox 
-	offlineStylebox 
 	$VBoxContainer/TopRow/Name.text = printerName
 	$VBoxContainer/HFlow/StatusText.text = "OFFLINE"
 	is_online(address)

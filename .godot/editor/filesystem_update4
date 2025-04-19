@@ -4,5 +4,4 @@ res://core-a/PrinterStatusControl/stylebox_printer_offline.tres
 res://core-a/PrinterStatusControl/printer_status_control.tres
 res://core-a/PrinterStatusControl/stylebox_printer_online.tres
 res://control-ui/svx-ui-macro/pod_shader.tres
-res://core-a/PrinterStatusControl/printer_report.tscn
 res://core-a/PrinterStatusControl/printer_report.gd
