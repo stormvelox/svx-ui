@@ -23,7 +23,7 @@ texture = ExtResource("2_ql7m0")
 [node name="HeatsyncLabsIcon-Color-Latest" type="Sprite2D" parent="RigidHSLLogo"]
 unique_name_in_owner = true
 visible = false
-skew = 702.576
+skew = 2125.22
 texture = ExtResource("2_ql7m0")
 
 [node name="HeatsyncLabsIcon-White-Latest" type="Sprite2D" parent="RigidHSLLogo"]

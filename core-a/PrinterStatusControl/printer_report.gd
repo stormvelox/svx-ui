@@ -24,14 +24,14 @@ var _status : StatusMode = StatusMode.OFFLINE
 
 #endregion
 #region methods
-
-
-# Ready
 func _ready() -> void:
+	# Set-up printer
 	print_debug("_ready running...")
 	$VBoxContainer/TopRow/Name.text = printerName
 	$VBoxContainer/HFlow/StatusText.text = "OFFLINE"
+	# Check if printer is online
 	is_online(address)
+	# End of Ready
 
 
 # Process (every frame)
@@ -62,7 +62,7 @@ func is_online(url: String) -> bool:
 		change_style(_status)
 		_statusText.text = "ONLINE"
 	else:
-		print_debug("Priner is offline")
+		print_debug("Printer is offline")
 		_status = StatusMode.OFFLINE
 		change_style(_status)
 		_statusText.text = "OFFLINE"

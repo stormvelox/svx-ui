@@ -1,0 +1,123 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm886sjrxqupk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5eafe"]
+bg_color = Color(0.509804, 0.823529, 0.960784, 0.172549)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.14902, 0.333333, 0.207843, 0.917647)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1mh8"]
+bg_color = Color(0.0901961, 0.188235, 0.0941176, 0.643137)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Intranet" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5eafe")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Intranet"]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Intranet/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Network (Intranet)"
+
+[node name="Label2" type="Label" parent="Intranet/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Network (Intranet)"
+
+[node name="Hardware" type="PanelContainer" parent="Intranet"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_k1mh8")
+
+[node name="Label" type="Label" parent="Intranet/Hardware"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "RaspberryPi(maybe)"
+
+[node name="CenterContainer" type="CenterContainer" parent="Intranet/Hardware"]
+layout_mode = 2
+
+[node name="Software" type="Control" parent="Intranet/Hardware/CenterContainer"]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Redis" type="PanelContainer" parent="Intranet/Hardware/CenterContainer/Software"]
+layout_mode = 2
+offset_left = -123.0
+offset_top = -88.0
+offset_right = -27.0
+offset_bottom = -68.0
+
+[node name="Label" type="Label" parent="Intranet/Hardware/CenterContainer/Software/Redis"]
+layout_mode = 2
+text = "Redis"
+
+[node name="ProxyIfNoDeny_Track" type="PanelContainer" parent="Intranet/Hardware/CenterContainer/Software"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = -95.0
+offset_right = 190.0
+offset_bottom = -52.0
+
+[node name="Label" type="Label" parent="Intranet/Hardware/CenterContainer/Software/ProxyIfNoDeny_Track"]
+layout_mode = 2
+text = "Proxy?
+For tracking, not denying"
+
+[node name="Printer" type="PanelContainer" parent="Intranet/Hardware/CenterContainer/Software"]
+layout_mode = 2
+offset_left = -131.0
+offset_top = 61.0
+offset_right = -35.0
+offset_bottom = 81.0
+
+[node name="Label" type="Label" parent="Intranet/Hardware/CenterContainer/Software/Printer"]
+layout_mode = 2
+text = "Printer??(s?)"
+
+[node name="PrintJobs" type="Label" parent="Intranet/Hardware/CenterContainer/Software/Printer"]
+layout_mode = 2
+text = "Printer??(s?)"
+
+[node name="Conversion" type="Label" parent="Intranet/Hardware/CenterContainer/Software/Printer"]
+layout_mode = 2
+text = "Printer??(s?)"
+
+[node name="IForgor" type="PanelContainer" parent="Intranet/Hardware/CenterContainer/Software"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 120.0
+offset_bottom = 42.0
+
+[node name="Label" type="Label" parent="Intranet/Hardware/CenterContainer/Software/IForgor"]
+layout_mode = 2
+text = "iForgor"

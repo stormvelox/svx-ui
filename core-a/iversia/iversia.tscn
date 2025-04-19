@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://djghhp6kvjcws" path="res://core-a/iversia/physics_test_rigids.tscn" id="6_k0nvq"]
 [ext_resource type="Script" uid="uid://cc75aule6v4xw" path="res://core-a/iversia/iv_deletion_zone.gd" id="7_j62rk"]
 [ext_resource type="PackedScene" uid="uid://hop1j66pwue4" path="res://core-a/skelerobot/char_actor.tscn" id="8_gaf6o"]
-[ext_resource type="PackedScene" uid="uid://b3u85wk3oparn" path="res://editor-only/spawner_2d.tscn" id="12_dlts0"]
+[ext_resource type="PackedScene" uid="uid://b3u85wk3oparn" path="res://editor-only/sv2b_spawnersn2d/spawner_2d.tscn" id="12_dlts0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81he5"]
 size = Vector2(3000, 1000)
